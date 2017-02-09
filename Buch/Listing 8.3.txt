@@ -1,0 +1,11 @@
+<div data-role="page" id="page1"> 
+<div data-role="header"> 
+<h1>Seitenüberschrift</h1> 
+</div> 
+<div data-role="content"> 
+<p>Seiteninhalt</p>
+</div> 
+<div data-role="footer"> 
+<h3>Seitenfußzeile</h3> 
+</div> 
+</div>

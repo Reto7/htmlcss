@@ -1,0 +1,17 @@
+<article>
+<aside>
+<h1>Überschrift Seitenleiste<h1>
+<p>Inhalt Seitenleiste</p>
+</aside> 
+<h1>Überschrift Absatz</h1>
+<p>Inhalt Absatz</p>
+<p>Weiterer Inhalt</p>
+<section>
+<h1>Überschrift 1. Abschnitt</h1>
+<p>Inhalt 1. Abschnitt</p>
+</section>
+<section>
+<h1>Überschrift 2. Abschnitt</h1>
+<p>Inhalt 2. Abschnitt</p>
+</section>
+</article>

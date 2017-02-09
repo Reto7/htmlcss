@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style> 
+body {
+  background-color:pink;
+}
+
+.animation {
+  text-align:center;
+  padding-top:25px;
+  width:100px;
+  height:100px;
+  background:rrgba(100 0 0 .5);
+  position:relative;
+  -webkit-animation:banner 5s infinite; 
+}
+
+@keyframes banner{
+0%   {top:0px; background:yellow; width:100px;}
+50%   {top:200px; background-color:rgba(100,1000,100,0.5); width:400px;}
+100% {top:0px; background-color:rgba(255,0,0,0.5); width:600px;}
+}
+
+@-webkit-keyframes banner{
+0%   {top:0px; background:yellow; width:100px;}
+50%   {top:200px; background-color:rgba(100,1000,100,0.5); width:400px;}
+100% {top:0px; background-color:rgba(255,0,0,0.5); width:600px;}
+}
+</style>
+</head>
+
+<body>
+<div class="animation"><h1>Hello World!</h1></div>
+
+<h1>Flexitarian skateboard</h1>
+<p>Flexitarian skateboard wolf, kitsch sunt sint enim roof party nihil bespoke master cleanse assumenda Marfa. Minim craft beer selvage Truffaut dolore. 
+<p>Neutra dreamcatcher fanny pack 8-bit vero iPhone literally. Lo-fi quinoa non do, fugiat bicycle rights 8-bit eu photo booth direct trade quis synth High Life.</p>
+
+</body>
+</html>

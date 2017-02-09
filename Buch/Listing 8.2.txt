@@ -1,0 +1,22 @@
+<div data-role="page" id="page">
+<h1>Seitenüberschrift</h1>
+<p>Seiteninhalt</p>
+<ul data-role="listview">
+<li><a href="#page2">Page 2</a></li>
+<li><a href="#page3">Page 3</a></li>
+<li><a href="#page4">Page 4</a></li>
+<li><a href="#page5">Page 5</a></li>
+</ul>
+</div>
+<div data-role="page" id="page2">
+<h1>Seitenüberschrift</h1>
+<p>Seiteninhalt</p></div>
+<div data-role="page" id="page3">
+<h1>Seitenüberschrift</h1>
+<p>Seiteninhalt</p></div>
+<div data-role="page" id="page4">
+<h1>Seitenüberschrift</h1>
+<p>Seiteninhalt</p></div>
+<div data-role="page" id="page5">
+<h1>Seitenüberschrift</h1>
+<p>Seiteninhalt</p></div>

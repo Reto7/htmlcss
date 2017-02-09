@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vielen Dank, dass Sie dieses Formular ausfüllen</title>
+</head>
+<body>
+<form>
+<h1>Bitte füllen Sie die folgenden Formularfelder aus</h1>
+<p><input type="submit" value="Formular senden"/> 
+<input type="reset" value="Formular zurücksetzen"/></p>
+</form>
+</body>
+</html>

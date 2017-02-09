@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+<title>HTML5-Vorlage Seitenstruktur</title>
+</head>
+<body>
+<article>
+<header>
+</header>
+<section>
+<aside>
+<h3>Seitenleiste 1 Überschrift</h3>
+<p>Seitenleiste 1 Inhalt</p>
+</aside>
+<h1>Bereich 1 Überschrift</h1>
+<p>Bereich 1 Inhalt</p>
+<p>Weiterer Bereich 1 Inhalt</p>
+<p>Weiterer Bereich 1 Inhalt</p>
+</section>
+<section>
+<aside>
+<h3>Seitenleiste 2 Überschrift</h3>
+<p>Seitenleiste 2 Inhalt</p>
+</aside>
+<h1>Bereich 2 Überschrift</h1>
+<p>Bereich 2 Inhalt</p>
+<p>Weiterer Bereich 2 Inhalt</p>
+<p>Weiterer Bereich 2 Inhalt</p>
+</section>
+<footer>
+<h6>Fußzeile Inhalt</h6>
+</footer>
+</article>
+</body>
+</html>

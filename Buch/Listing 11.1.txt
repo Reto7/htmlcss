@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Galerie</title>
+<style>
+a {
+  text-decoration:none;
+  color:white;
+}
+img {
+  border:none;
+}
+body {
+  font-family:Arial, Helvetica, sans-serif;
+  color:white;
+  background-color:black;
+}
+.gallery-box{
+  width:180px;
+  height:200px;
+  float:left;
+  margin:5px;
+  padding:5px;
+  border: 2px solid gray;
+}
+.gallery-box:hover {
+  transform:scale(1.25,1.25)rotate(5deg)translateY(50px)translateX(50px);
+  -webkit-transform:scale(1.25,1.25)rotate(5deg)translateY(50px) translateX(50px);
+  -ms-transform:scale(1.25,1.25)rotate(5deg)translateY(50px) translateX(50px);
+
+  border:2px solid white;
+  padding-top:15px;
+}
+.gallery-box:active {
+  transform:skew(3deg,5deg);
+  -webkit-transform:skew(3deg,5deg);
+  -ms-transform:skew(3deg,5deg);
+  border: 2px solid red;
+}
+</style>
+</head>
+
+<body>
+    <h1>Galerie der gefährdeten Arten</h1>
+  <div class="gallery-box">
+    <a href="http://blogs.tribune.com.pk/wp-content/uploads/
+2012/07/12811-White_Lionx-1342510971-522-640x480.jpg"
+ target="_blank"><img src="http://blogs.tribune.
+com.pk/wp-content/uploads/2012/07/12811-White_Lionx-1342510971-522-640x480.jpg" width="180" height=auto alt="White Lion" title="zum Vergrößern anklicken">
+    <h3>Weißer Löwe</h3></a>
+  </div>
+  <div class="gallery-box">
+  <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/d/de/%D7%A0%D7%9E%D7%A8.JPG/
+640px-%D7%A0%D7%9E%D7%A8.JPG" target="_blank"> 
+<img src="http://upload.wikimedia.org/wikipedia/
+commons/thumb/d/de/%D7%A0%D7%9E%D7%A8.JPG/
+640px-%D7%A0%D7%9E%D7%A8.JPG" width="180" alt="Arabian leopard" height=auto title="zum Vergrößern anklicken">
+    <h3>Arabischer Leopard</h3></a>
+  </div>
+  <div class="gallery-box">
+    <a href="http://upload.wikimedia.org/wikipedia/
+commons/thumb/3/37/Wolf.JPG/640px-Wolf.JPG" target="_blank">
+<img src="http://upload.wikimedia.org/wikipedia/
+commons/thumb/3/37/Wolf.JPG/640px-Wolf.JPG" width="180" height=auto alt="wolf" title="zum Vergrößern anklicken">
+    <h3>Himalaya-Wolf</h3></a>
+  </div>
+
+</body>
+</html>

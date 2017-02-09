@@ -1,0 +1,40 @@
+<!--Die HTML5 doctype-Deklaration (document type) ist ganz einfach-->
+<!DOCTYPE HTML>
+<!--Der gesamte Seiteninhalt befindet sich im HTML-Element-->
+<html>
+<!--Der Inhalt des Head-Elements erscheint nicht im Browser-Fenster-->
+<head>
+<!--Der Zeichensatz UTF-8 unterstützt alle Symbole und Zeichen-->
+<meta charset="UTF-8">
+<title>HTML Vorlage</title>
+<!--Die folgende Zeile stellt die Verknüpfung zu unserer Stylesheet-Datei her-->
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<!--Inhalt im HTML-Element erscheint im Browser-Fenster-->
+<body>
+<!--Unser gesamter Inhalt ist in den ID-Stil wrapper eingeschlossen-->
+<div id="wrapper">
+<h1>Inhalt Überschrift 1</h1>
+<!--column-2 ID-Stil ist nach links ausgerückt und dient der Navigation-->
+<div id="column-2">
+<h2>Links...</h2>
+<ul>
+<li> <h3><a href="#">Link 1</a></h3></li>
+<li> <h3><a href="#">Link 2</a></h3></li>
+<li> <h3><a href="#">Link 3</a></h3></li>
+</ul>
+<!--column-1 ID-Stil ist nach rechts ausgerückt und wird für Inhalt verwendet-->
+</div>
+<div id="column-1">
+<h1>Hier steht die Überschrift für die zweite Spalte </h1>
+<p>Hier steht der Inhalt der rechten Spalte </p>
+<div class="box"><p>Feldinhalt</p></div>
+<div class="box"><p>Feldinhalt</p></div>
+<div class="box"><p>Feldinhalt</p></div>
+</div>
+<!--Der Klassenstil clear löscht die Auslagerung-->
+<div class="clear"></div>
+<h4>Hier stehen Kontaktinformationen</h4>
+</div>
+</body>
+</html>
