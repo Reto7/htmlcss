@@ -1,0 +1,29 @@
+/* body fuer alles !*/
+body{
+    font-family: Arial, Verdana;
+}
+
+p{
+    color: saddlebrown;
+    font-size: 13px;
+}
+
+h2,h3,h4,h5{
+    color: #4c8b2b;
+}
+h1{
+    color: #286609;
+    font-size: 28px;
+}
+
+header {
+    background-color: lightgray;
+}
+
+section {
+    background-color: #C6D580;
+}
+
+a {
+    text-decoration: none;
+}

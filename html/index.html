@@ -3,56 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>MyCompany</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
 
     <header>
-        <a href="index.html"><img src="../images/ibw.png" alt="ibw" width="252" height="80"></a>
-        <nav><a href="index.html">Home</a> | <a href="pages/ueberuns.html">Über uns</a>  | <a href="pages/kontakt.html">Kontakt</a>| <a href="pages/geschichte.html">Geschichte</a> | <a href="pages/links.html">Links</a> </nav>
+        <a href="index.html"><img src="images/html5black.svg" alt="ibw-logo" title="IBW-Logo..." width="150"></a>
+        <nav><a href="index.html" title="Startseite">Home</a> | <a href="pages/ueberuns.html">Über uns</a>  | <a href="pages/kontakt.html">Kontakt</a> | <a href="pages/geschichte.html">Geschichte</a> | <a href="pages/links.html">Links</a> </nav>
     </header>
 
-    <!-- ausserhalb article, nur 1x ein H1 setzten -->
-    <h1>Startseite</h1>
+    <main>
+        <!-- ausserhalb article, nur 1x ein H1 setzten -->
+        <h1>Startseite</h1>
 
-    <!-- mehrere articles, innerhalb jeden Articles
-         nur ein H1 tag, gut fuer Suchmaschinen -->
-    <article>
-        <h2>Titel Article 1</h2>
-        <p>Ausreisepflichtige Ausländer müssen so schnell es geht Deutschland verlassen. In diesem Punkt sind sich Bund und Länder einig. Sie wollen zeitnah ein entsprechendes Gesetz verabschieden. Nur ein Punkt bleibt strittig.</p>
-        <h2>SubTitel Article 1</h2>
-        <p>Donald Trumps <b>Twitter</b>-Tiraden über <i>Mexiko</i> schrecken längst nicht alle Unternehmen ab, ins benachbarte Billiglohnland umzuziehen. Selbst die Autobauer sind nicht ganz so folgsam, wie es vielleicht scheint. </p>
-        <!-- bestimmter Bereich innerhalb Article -->
-        <section>
-            <h4>Links</h4>
-            http://www.w3schools.com/html/ <br>
-            https://validator.w3.org/<br><br>
-        </section>
-    </article>
+        <!-- mehrere articles, innerhalb jeden Articles
+             nur ein H1 tag, gut fuer Suchmaschinen -->
+        <article>
+            <h2>Titel Article 1</h2>
+            <p>Ausreisepflichtige Ausländer müssen so schnell es geht Deutschland verlassen. In diesem Punkt sind sich Bund und Länder einig. Sie wollen zeitnah ein entsprechendes Gesetz verabschieden. Nur ein Punkt bleibt strittig.</p>
+            <mark>dies hier ist ein Mark</mark>
+            <p></p>
+            <details><summary>ein Summary, bitte aufklicken...</summary>das hier ist ein Detailtext! Nach der Demontage in München steht Arsenal wieder vor dem Aus in der Champions League. Die Stimmung ist am Tiefpunkt. Nicht nur der Trainer steht mächtig in der Kritik </details>
+            <h2>SubTitel Article 1</h2>
+            <p>Donald Trumps <b>Twitter</b>-Tiraden über <i>Mexiko</i> schrecken längst nicht alle Unternehmen ab, ins benachbarte Billiglohnland umzuziehen. Selbst die Autobauer sind nicht ganz so folgsam, wie es vielleicht scheint. </p>
+            <p><pre><code>hier kommt reines HTML als Code  &lt;h1&gt;</code></pre></p>
+            <!-- bestimmter Bereich innerhalb Article -->
+            <section>
+                <h4>Links</h4>
+                http://www.w3schools.com/html/ <br>
+                https://validator.w3.org/<br><br>
+            </section>
+        </article>
 
-    <hr>
+        <hr>
 
-    <article>
-        <h2>Titel Article 2</h2>
-        <p>ordered list</p>
-        <ol>
-            <li>element1</li>
-            <li>element2</li>
-            <li>element3</li>
-        </ol>
-        <h2>SubTitel Article 2</h2>
-        <p>unordered list</p>
-        <ul>
-            <li>element1</li>
-            <li>element2</li>
-            <li>element3</li>
-        </ul>
-    </article>
+        <article>
+            <h2>Titel Article 2</h2>
+            <p>ordered list</p>
+            <ol>
+                <li>element1</li>
+                <li>element2</li>
+                <li>element3</li>
+            </ol>
+            <h2>SubTitel Article 2</h2>
+            <p>unordered list</p>
+            <ul>
+                <li>element1</li>
+                <li>element2</li>
+                <li>element3</li>
+            </ul>
+        </article>
 
-    <!-- zusatzinfos -->
-    <aside>
-        übrigens, heute ist Donnerstag
-    </aside>
+        <!-- zusatzinfos, koennen auch ausserhalb des MAIN Sein, z.B. wenn Sidebar-->
+        <aside>
+            übrigens, heute ist Donnerstag
+        </aside>
+
+    </main>
 
     <footer>
         <!-- mit href="tel koennen handy direkt wählen bei anklicken -->
