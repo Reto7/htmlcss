@@ -33,6 +33,7 @@ section {
     background-color: #C6D580;
 }
 
+/* main nicht verwenden! IE 11 kommt damit nicht klar */
 main {
     background-color: rgba(198, 213, 128, 0.43);
     border: 2px solid yellowgreen;
