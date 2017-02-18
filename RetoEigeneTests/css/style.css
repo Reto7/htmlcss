@@ -1,0 +1,22 @@
+/* kopiert aus F12 Chrome */
+article, aside, footer, header, main, nav, section {
+    display: block;
+}
+
+header {
+    background-color: #4c8b2b;
+    width: 80%;
+}
+main {
+    background-color: #8b7f28;
+    width: 80%;
+}
+aside {
+    background-color: #2d828b;
+    width: 20%;
+    float: right;
+}
+footer {
+    background-color: #6b598b;
+    width: 80%;
+}
