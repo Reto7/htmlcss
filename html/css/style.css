@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Days+One|Gloria+Hallelujah');
+
+
 /* body fuer alles !*/
 body{
     font-family: Arial, Verdana;
@@ -45,7 +48,6 @@ main {
 }
 
 aside {
-    /*width:40%;*/
     display: block;
     float: right;
 
@@ -53,14 +55,32 @@ aside {
 
     position: fixed; /* wie absolute */
     right: 5%;
-
-
+    /*
+    bottom: 0%;
+    height: 80%;
+    */
 
     background: #95b1a9;
     /* orul */
-    padding:5px;
+    padding: 5px 2px 2px 15px;
+    margin-top: 5px;
     /* die border-box verhindert die Vergroesserung beim Padding! */
     box-sizing: border-box;
+
+    /* schatten */
+    box-shadow: 10px 5px 5px #5f5f5f;
+
+    font-family: 'Gloria Hallelujah', cursive;
+}
+aside ul {
+    margin: 0; /* chrome macht bei listenelementen oben ein rand, hiermit entfernen! */
+    /* orul */
+    padding: 0px 0px 15px 15px;
+}
+aside li {
+    /* orul */
+    margin: 0;
+    padding: 0px 0px 0px 0px;
 }
 
 
@@ -71,10 +91,12 @@ p{
 
 h2,h3,h4,h5{
     color: #4c8b2b;
+    font-family: 'Days One', sans-serif;
 }
 h1{
     color: #286609;
     font-size: 28px;
+    font-family: 'Days One', sans-serif;
 }
 
 header {
@@ -141,3 +163,24 @@ nav li a{
 img {
     border: none;
 }
+
+
+
+/* responsive BREAKPOINT */
+/* ------  spezial, falls device zu klein und die Seite schlecht aussieht --------  */
+@media (min-device-width: 300px) and (max-device-width: 500px ){
+
+    #logo img {
+        width: 50px;
+        height: auto;
+    }
+
+    aside {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+    }
+}
+
+
