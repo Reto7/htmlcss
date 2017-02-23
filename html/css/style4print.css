@@ -1,0 +1,22 @@
+/* fuer printing ist navigation und side-block nicht relevant */
+aside, nav{
+    display: none;
+}
+
+body, header, main, article, footer {
+    background: white;
+    background-color: white;
+    border: 0;
+    border-color: white;
+    padding: 0;
+    box-shadow: none;
+}
+
+/* alle bilder weg */
+img {
+    display: none;
+}
+/* aber logo bild doch drucken */
+#logo img {
+    display: block;
+}
