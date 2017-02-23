@@ -1,0 +1,248 @@
+﻿
+<!DOCTYPE HTML>
+<html lang="de_CH">
+<head>
+	<meta charset="utf-8">
+	<title>HTML5 Formulare</title>
+	<link rel='stylesheet'  href='../css/style.css' media='all' />
+<!-- Beispiel CSS direkt ins Dokument einfügen
+	<style type="text/css">
+		label, input, select {
+			display:block;
+		}
+		input, select {
+			margin-bottom: 1em;
+		}
+		fieldset {
+			margin-bottom: 2em;
+			padding: 1em;
+		}
+		fieldset fieldset {
+			margin-top: 1em;
+			margin-bottom: 1em;
+		}
+		input[type="checkbox"] {
+			display:inline;
+		}
+		.range {
+			margin-bottom:1em;
+		}	
+		.card-type input, .card-type label {
+			display:inline-block;
+		}
+	</style>	
+-->
+</head>
+    <body>
+		<header>
+		<div class="header-elements">
+			<div id="logo">
+			<a href="../../index.html"><img width="200" src="../images/HTML5_1Color_Black.svg" alt="HTML5 Logo" title="HTML5 Logo"></a>
+		</div>
+		    <nav>
+      <ul>
+        <li><a href="09022017.html">Repetition 09.02.2017</a></li>
+        <li><a href="16022017.html">Repetition 16.02.2017</a></li>
+        <li><a href="23022017.html">23.02.2017</a></li>
+        <li><a href="09032017.html">Repetition 09.03.2017</a></li>
+      </ul>
+    </nav>
+		</div>
+		</header>
+		<div id="main">
+			<article>
+				<h1>Formulare erstellen</h1>
+				<h2>Bitte kontaktieren Sie uns</h2>
+				<p>Wir freuen uns über Ihre Kontaktaufnahme</p>					
+					<section>
+						<form oninput="total.value = (nights.valueAsNumber * 99) + 
+						 ((guests.valueAsNumber - 1) * 10)">
+
+						  <label>Name:</label>
+						  <input type="text" id="full_name" name="full_name" placeholder="Hans Muster" required>
+
+						  <label>E-Mail:</label>
+						  <input type="email" id="email_addr" name="email_addr" required>
+
+						  <label>E-Mail wiederholen:</label>
+						  <input type="email" id="email_addr_repeat" name="email_addr_repeat" required 
+						   oninput="check(this)">
+
+						  <label>Ankunft:</label>
+						  <input type="date" id="arrival_dt" name="arrival_dt" required>
+						  
+						  <label>Anzahl Nächte (Zimmerpreis CHF 99.00 pro Nacht):</label>
+						  <input type="number" id="nights" name="nights" value="1" min="1" max="30" required>
+
+						  <label>Anzahl Personen (Jede zusätzliche Person CHF 10.00 pro Nacht):</label>
+						  <input type="number" id="guests" name="guests" value="1" min="1" max="4" required>
+
+						  <label>Geschätzer Gesamtpreis:</label>
+						  CHF<output id="total" name="total">99</output>.00
+						  <br><br>
+
+						  <label>Rabatcode:</label>
+						  <input type="text" id="promo" name="promo" pattern="[A-Za-z0-9]{6}" 
+						   title="Promo codes consist of 6 alphanumeric characters.">
+
+						  <input type="submit" value="Reservieren" /> 
+						</form>
+						<script>
+						function check(input) {
+						  if (input.value != document.getElementById('email_addr').value) {
+							input.setCustomValidity('The two email addresses must match.');
+						  } else {
+							// input is valid -- reset the error message
+							input.setCustomValidity('');
+						  }
+						}
+						</script>			
+					</section>	
+					<section>
+						<h2>Beispiel mit speziellen HTML 5 Elementen</h2>
+						<form id="register">
+							<h3>Register for Miss Bakers Space Cadets</h3>
+							  <fieldset> 
+								<legend>Personal details</legend> 
+								<div> 
+									<label>First Name
+									<input id="given-name" name="given-name" type="text" placeholder="First name only" required autofocus> 
+									</label>
+								</div>
+								<div> 
+									<label>Last Name
+									<input id="family-name" name="family-name" type="text" placeholder="Last name only" required autofocus> 
+									</label>
+								</div>
+								<div> 
+									<label>Date of Birth
+									<input id="dob" name="dob" type="date" required>
+									</label>
+								</div> 
+								<div> 
+									<label>Email 
+									<input id="email" name="email" type="email" placeholder="example@domain.com" required>
+									</label> 
+								</div> 
+								<div> 
+									<label>URL 
+									<input id="url" name="url" type="url" placeholder="http://mysite.com">
+									</label> 
+								</div>    
+								<div> 
+									<label>Telephone 
+									<input id="phone" name="phone" type="tel" placeholder="Eg. +447000 000000" required>
+									</label> 
+								</div> 
+								<div>
+									<label>Shoesize
+									<input id="shoes" name="shoes" type="number" min="5" max="18" step="0.5" value="9">
+									</label>
+								</div>
+								<div>
+									<label>Color
+									<input id="color" name="color" type="color">
+									</label>
+								</div>
+								<div>
+									<label>Flying Skill level (1 low - 100 high)
+									<input id="skill" name="skill" type="range" min="1" max="100" value="0">
+									<output name="output" onforminput="value=a.value">0</output>
+									</label>
+								</div>
+							  </fieldset>
+							  <fieldset> 
+								<legend>Billing address</legend> 
+								<div> 
+									<label>Address 
+									<textarea id="address" name="address" rows=5 required></textarea>
+									</label> 
+								</div> 
+								<div> 
+									<label>Post code 
+									<input id="postCode" name="postCode" type="text" required>
+									</label> 
+								</div> 
+								<div> 
+									<label>Country 
+									<input id="country" name="country" list="country-names" type="text" required> 
+									<datalist id="country-names"> 
+										<option label="England" value="England"></option> 
+										<option label="Northern Ireland" value="Northern Ireland"></option> 
+										<option label="Ireland" value="Ireland"></option> 
+										<option label="Scotland" value="Scotland"></option> 
+										<option label="Wales" value="Wales"></option> 
+									</datalist>
+									</label> 
+								</div> 
+							  </fieldset> 
+							  <fieldset> 
+								<legend>Card details</legend> 
+								<fieldset> 
+								  <legend>Card type</legend> 
+								  <div class="card-type"> 
+									  <input id="visa" name="cardtype" type="radio"> 
+									  <label for="visa">VISA</label> 
+									  <input id="mastercard" name="cardtype" type="radio">
+									  <label for="mastercard">Mastercard</label> 
+									  <input id="amex" name="cardtype" type="radio"> 
+									  <label for="amex">AMEX</label>
+								  </div> 
+								</fieldset>
+								<div> 
+									<label>Name
+									<input id="cardName" name="cardName" type="text" placeholder="Name as it appears on your card" required>
+									</label>  
+								</div>
+								<div> 
+									<label>Card number 
+									<input id="cardNo" name="cardNo" type="number" required title="The sixteen digit number across the middle of your card."> 
+									</label>
+								</div>
+								<div> 
+									<label>Security code 
+									<input id="security" name="security" type="number" required pattern="[0-9]{3}" title="The last three digits on the back of your card.">
+									</label> 
+								</div>
+								<div> 
+									<label>Expiry Date 
+									<input id="expiry" name="expiry" type="month">
+									</label>
+								</div>
+							  </fieldset> 
+							  <fieldset> 
+								<div> 
+									<button type=submit>Place Order</button> 
+								</div> 
+							  </fieldset> 
+							</form> 
+					</section>	
+					<section>
+					<h2>Progress</h2>
+					<progress max="100" value="80"></progress>
+					</section>					
+				</article>
+				<aside>
+				<h2>Links zu den Quellen</h2>
+					<p><a href="https://www.html5rocks.com/de/tutorials/forms/html5forms/" target="_blank">Quelle Formular mit Javascript</a></p>
+					<p><a href="https://css-tricks.com/html5-progress-element/" target="_blank">CSS Tricks HTML5 Element Progress</a></p>	
+					<p><a href="https://html5doctor.com/demos/forms/forms-example.html" target="_blank">HTML5 Doctor</a></p>
+					<p><a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/" target="_blank">CSS Tricks media queries</a></p>	
+					<br><br>
+					<p><a href="https://mailchimp.com" target="_blank">Mailchimp, Online Formular Tool</a></p>
+					<p>Im Buch HTML5 und CSS3 für Dummies Seite 135</p>
+					<!--<p><a href="http://www.html-form-guide.com/contact-form/php-email-contact-form.html" target="_blank">Formular Skript</a></p>-->
+				</aside>
+		</div>
+		<footer>
+			<div class="footer-elements">
+				 <small>Copyright © <time datetime="2017">2017</time> by Ann Nielsen</small>
+				 <div id="footer-logo">
+				 <a href="http://www.w3.org/html/logo/">
+				 <img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
+				 </a>
+				 </div>
+			</div>
+		</footer>
+    </body>
+</html>
