@@ -75,12 +75,18 @@ aside {
 aside ul {
     margin: 0; /* chrome macht bei listenelementen oben ein rand, hiermit entfernen! */
     /* orul */
-    padding: 0px 0px 15px 15px;
+    padding: 0px 0px 5px 5px;
 }
 aside li {
     /* orul */
     margin: 0;
     padding: 0px 0px 0px 0px;
+    list-style-type: none;
+}
+aside a {
+    text-shadow: 5px 5px 5px white;
+    text-decoration: none;
+
 }
 
 
@@ -157,8 +163,6 @@ nav li a{
 }
 
 
-
-
 /* der IE zeigt bei a tags auf images einen unschoenen Rand */
 img {
     border: none;
@@ -166,9 +170,12 @@ img {
 
 
 
-/* responsive BREAKPOINT */
+
+
+/* responsive BREAKPOINTS mit Media Queries */
 /* ------  spezial, falls device zu klein und die Seite schlecht aussieht --------  */
-@media (min-device-width: 300px) and (max-device-width: 500px ){
+/* kann man gut mit Chrome Testen - iphone oder responsive simulieren, rechts obeb "show device frame" auswaehlen */
+@media (min-device-width: 30px) and (max-device-width: 380px ){
 
     #logo img {
         width: 50px;
@@ -182,5 +189,18 @@ img {
         width: 100%;
     }
 }
+@media (min-device-width: 381px) and (max-device-width: 500px ){
 
+    #logo img {
+        width: 250px;
+        height: auto;
+    }
+
+    aside {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+    }
+}
 
