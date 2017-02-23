@@ -1,0 +1,35 @@
+/* kopiert aus F12 Chrome */
+article, aside, footer, header, main, nav, section {
+    display: block;
+}
+
+header {
+    background-color: #4c8b2b;
+    width: 77%;
+    /* orul */
+    padding: 0px 10px 5px 10px;
+}
+main {
+    background-color: #8b7f28;
+    width: 77%;
+    /* orul */
+    padding: 0px 10px 5px 10px;
+}
+aside {
+    background-color: #2d828b;
+    width: 18%;
+    /* orul */
+    padding: 0px 5px 5px 5px;
+    float: right;
+}
+footer {
+    background-color: #6b598b;
+    width: 77%;
+    /* orul */
+    padding: 0px 10px 5px 10px;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
