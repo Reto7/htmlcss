@@ -1,0 +1,26 @@
+﻿
+body {
+	font: Verdana, Arial, Helvetica, sans-serif;
+	font-size:12pt;
+	background: white;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	font-weight:normal;
+}
+
+nav{
+	display:none;
+}
+
+img{
+    display:none;
+}
+
+#logo img{
+	display:block;
+}
+
+
+
+
