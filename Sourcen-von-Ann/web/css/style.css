@@ -1,13 +1,13 @@
 ﻿
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,700');
 
+/*HTML TAGS */
 html, body{
-		height:100%;
+	height:100%;		
 }
 
 body {
 	font-family: 'Roboto', sans-serif;
-	/*font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;*/
 	font-size:1em;
 	background: #42413C;
 	margin: 0;
@@ -54,17 +54,6 @@ a:hover, a:active, a:focus {
 	text-decoration: none;
 }
 
-#main {
-	width: 80%;
-	height:auto;
-	min-height:100%;
-	padding: 60px 3%;
-	box-sizing: border-box;
-	background: #FFFFFF;
-	margin: 0 auto; 
-}
-
-
 nav{
 	float:right;
 	width: 236px;
@@ -95,6 +84,18 @@ nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
 	background: #ADB96E;
 	color: #FFF;
 }
+/*END html tags */
+
+#main {
+	width: 80%;
+	height:auto;
+	min-height:100%;
+	padding: 60px 3%;
+	box-sizing: border-box;
+	background: #FFFFFF;
+	margin: 0 auto; 
+}
+
 
 /* ~~ Fußzeile und Header ~~ */
 footer, header {
@@ -120,6 +121,7 @@ header, section, footer, aside, nav, article, figure {
 
 article{
     width:80%;
+	display:inline;
 }
 aside{
 	width:20%;
@@ -137,8 +139,9 @@ aside a, aside a:link, aside a:visited{
 	color:white;
 	text-decoration:none;
 	box-sizing:border-box;
-	text-shadow: 5px 5px 5px white;
+	text-shadow: 5px 5px 5px rgba(255, 0, 0, .8);
 }
+
 
 #logo{
 	float:left;
@@ -147,6 +150,66 @@ aside a, aside a:link, aside a:visited{
 details{
 	margin: 20px 0;
 }
+
+/*columns Flex*/
+.container{
+	column-count:3;
+	column-gap:20px;
+	column-rule: 1px dotted grey;
+	/*
+	column-count
+	column-rule-style
+	column-rule-width
+	column-rule-color
+	column-rule
+	column-span
+	column-width
+	*/
+	margin-bottom: 40px;
+}
+
+.flex-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: lightgrey;
+	margin-bottom: 40px;
+}
+
+.flex-item {
+    background-color: cornflowerblue;
+    width: 33%;
+    margin: 10px;
+}
+
+
+.container-grid{
+	
+}
+
+.container-grid div:first-child{
+	border: 1px solid blue;
+	border-radius: 10px;
+}
+
+.container-grid div:nth-child(2){
+	border: 1px solid yellow;
+	border-radius: 10px;
+}
+
+.container-grid div:nth-child(3){
+	border: 1px solid green;
+	border-radius: 10px;
+}
+
+aside.columns-page{
+	width:100%;
+	position:relative;
+	right:auto;
+	top: auto;
+}
+
+
 
 /* form styles*/
 :invalid { 
@@ -173,20 +236,19 @@ form {
 }
 
 input {
-  border:1px solid #ccc;
-  font-size:20px;
-  width:300px;
-  min-height:30px;
-  display:block;
-  margin-bottom:15px;
-  margin-top:5px;
-  outline: none;
-
-  -webkit-border-radius:5px;
-  -moz-border-radius:5px;
-  -o-border-radius:5px;
-  -ms-border-radius:5px;
-  border-radius:5px;
+	  border:1px solid #ccc;
+	  font-size:20px;
+	  width:300px;
+	  min-height:30px;
+	  display:block;
+	  margin-bottom:15px;
+	  margin-top:5px;
+	  outline: none;
+	  -webkit-border-radius:5px;
+	  -moz-border-radius:5px;
+	  -o-border-radius:5px;
+	  -ms-border-radius:5px;
+	  border-radius:5px;
 }
 
 input[type=submit] {
@@ -199,10 +261,9 @@ input[type=submit] {
 
 /*responsive*/
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 520px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-device-width: 300px) and (max-device-width: 480px)
+ {
+	  
 	#logo img{
 		width: 130px;
 	}
@@ -216,5 +277,19 @@ input[type=submit] {
 	box-shadow: 2px 5px 2px black;
 	}
 }
+
+
+@media (min-device-width: 480px) and (max-device-width: 600px)
+ {
+	aside{
+	width:80%;
+	margin: 0 auto;
+	position:relative;
+	right:auto;
+	top:auto;
+	padding: 10px;
+	box-shadow: 5px 10px 5px black;
+	}
+ }
 
 
