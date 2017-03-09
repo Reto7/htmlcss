@@ -188,6 +188,14 @@ img {
         top: auto;
         width: 100%;
     }
+
+    /* ------------------------------------------------- */
+    /* Spalten  fuer kleine geraete                      */
+    /* ------------------------------------------------- */
+    .spalten {
+        column-count: 1;
+    }
+
 }
 @media (min-device-width: 381px) and (max-device-width: 500px ){
 
@@ -204,10 +212,11 @@ img {
     }
 }
 
+
+
 /* ------------------------------------------------- */
 /* formular                                          */
 /* ------------------------------------------------- */
-
 :required {
     border-color: #88a;
     -webkit-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
@@ -236,7 +245,6 @@ input {
     margin-bottom:15px;
     margin-top:5px;
     outline: none;
-
 }
 
 input[type=submit] {
@@ -253,3 +261,18 @@ fieldset {
     margin-bottom: 15px;
 }
 
+
+/* ------------------------------------------------- */
+/* Spalten  fuer Browser (gross)                     */
+/* ------------------------------------------------- */
+.spalten {
+    column-count: 3;
+    column-gap: 20px; /* Abstand zwischen den Spalten */
+    column-rule: 1px dotted gray;  /* Trenner zwischen den Spalten |  */
+    margin-bottom: 30px;
+    column-width: 150px;
+}
+
+.spalten::selection {
+    background: yellow;
+}
