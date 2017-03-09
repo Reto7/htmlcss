@@ -34,20 +34,37 @@
         <h1>Formular</h1>
 
         <!-- https://httpbin.org/ ist ein Request/response service,
-        gibt einfach den Input zurueck, aber nur GET, kein POST -->
+        gibt einfach den Input zurueck, aber nur GET, kein POST
+        test@example.com
+        -->
 
         <form action="https://httpbin.org/get" method="get" oninput="total.value = (nights.valueAsNumber * 99) +
                         ((guests.valueAsNumber - 1) * 10)">
 
-            <label>Full name:</label>
-            <input type="text" id="full_name" name="full_name" placeholder="Jane Doe" required>
+            <div class="names">
+                <label>Full name:</label>
+                <input type="text" id="full_name" name="full_name" placeholder="Jane Doe" required>
+            </div>
 
-            <label>Email address:</label>
-            <input type="email" id="email_addr" name="email_addr" required>
+            <fieldset class="emails">
+                <legend>E-Mail</legend>
+                <label>Email address:</label>
+                <input type="email" id="email_addr" name="email_addr" required>
 
-            <label>Repeat email address:</label>
-            <input type="email" id="email_addr_repeat" name="email_addr_repeat" required
-                   oninput="check(this)">
+                <label>Repeat email address:</label>
+                <input type="email" id="email_addr_repeat" name="email_addr_repeat" required
+                       oninput="check(this)">
+            </fieldset>
+
+            <label>Choose your room browser:</label>
+            <input list="browsers" id="browser" name="browser" required>
+            <datalist id="browsers">
+                <option value="IE">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
 
             <label>Arrival date:</label>
             <input type="date" id="arrival_dt" name="arrival_dt" required>
@@ -64,6 +81,9 @@
             <label>Estimated total:</label>
             $<output id="total" name="total">99</output>.00
             <br><br>
+
+            <label>Irgendwas:</label>
+            <input type="range" min="0" max="100" value="25" id="range" name="range"/>
 
             <label>Promo code:</label>
             <input type="text" id="promo" name="promo" pattern="[A-Za-z0-9]{6}"

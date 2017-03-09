@@ -204,8 +204,9 @@ img {
     }
 }
 
-
-/* formular */
+/* ------------------------------------------------- */
+/* formular                                          */
+/* ------------------------------------------------- */
 
 :required {
     border-color: #88a;
@@ -217,7 +218,7 @@ img {
 }
 
 form {
-    width: 100%;
+    width: 90%;
     margin: 20px auto;
 }
 
@@ -231,7 +232,7 @@ input {
     font-size:20px;
     width: 100%;
     min-height:30px;
-    display:block;  /* weshalb geht das nicht ?? */
+    display:block;
     margin-bottom:15px;
     margin-top:5px;
     outline: none;
@@ -240,5 +241,14 @@ input {
 
 input[type=submit] {
     background:none;
+    background-color: #7ebbec;
     padding:10px;
+}
+
+.names input {
+    font-weight: bold;
+}
+
+fieldset {
+    margin-bottom: 15px;
 }
