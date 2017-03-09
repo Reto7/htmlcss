@@ -204,3 +204,41 @@ img {
     }
 }
 
+
+/* formular */
+
+:required {
+    border-color: #88a;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+    -o-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+    -ms-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+    box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+}
+
+form {
+    width: 100%;
+    margin: 20px auto;
+}
+
+label {
+    width: 100%;
+}
+
+input {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border:1px solid #ccc;
+    font-size:20px;
+    width: 100%;
+    min-height:30px;
+    display:block;  /* weshalb geht das nicht ?? */
+    margin-bottom:15px;
+    margin-top:5px;
+    outline: none;
+
+}
+
+input[type=submit] {
+    background:none;
+    padding:10px;
+}
