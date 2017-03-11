@@ -188,6 +188,14 @@ img {
         top: auto;
         width: 100%;
     }
+
+    /* ------------------------------------------------- */
+    /* Spalten  fuer kleine geraete                      */
+    /* ------------------------------------------------- */
+    .spalten {
+        column-count: 1;
+    }
+
 }
 @media (min-device-width: 381px) and (max-device-width: 500px ){
 
@@ -204,3 +212,67 @@ img {
     }
 }
 
+
+
+/* ------------------------------------------------- */
+/* formular                                          */
+/* ------------------------------------------------- */
+:required {
+    border-color: #88a;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+    -o-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+    -ms-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+    box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+}
+
+form {
+    width: 90%;
+    margin: 20px auto;
+}
+
+label {
+    width: 100%;
+}
+
+input {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border:1px solid #ccc;
+    font-size:20px;
+    width: 100%;
+    min-height:30px;
+    display:block;
+    margin-bottom:15px;
+    margin-top:5px;
+    outline: none;
+}
+
+input[type=submit] {
+    background:none;
+    background-color: #7ebbec;
+    padding:10px;
+}
+
+.names input {
+    font-weight: bold;
+}
+
+fieldset {
+    margin-bottom: 15px;
+}
+
+
+/* ------------------------------------------------- */
+/* Spalten  fuer Browser (gross)                     */
+/* ------------------------------------------------- */
+.spalten {
+    column-count: 3;
+    column-gap: 20px; /* Abstand zwischen den Spalten */
+    column-rule: 1px dotted gray;  /* Trenner zwischen den Spalten |  */
+    margin-bottom: 30px;
+    column-width: 150px;
+}
+
+.spalten::selection {
+    background: yellow;
+}
