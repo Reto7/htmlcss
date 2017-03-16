@@ -56,7 +56,7 @@
 				<p>Wir freuen uns über Ihre Kontaktaufnahme</p>					
 					<section>
 						<form oninput="total.value = (nights.valueAsNumber * 99) + 
-						 ((guests.valueAsNumber - 1) * 10)">
+						 ((guests.valueAsNumber - 1) * 10)" autocomplete="on">
 
 						  <label>Name:</label>
 						  <input type="text" id="full_name" name="full_name" placeholder="Hans Muster" required>
@@ -65,7 +65,7 @@
 						  <input type="email" id="email_addr" name="email_addr" required>
 
 						  <label>E-Mail wiederholen:</label>
-						  <input type="email" id="email_addr_repeat" name="email_addr_repeat" required 
+						  <input type="email" id="email_addr_repeat" name="email_addr_repeat" required autocomplete="off"
 						   oninput="check(this)">
 
 						  <label>Ankunft:</label>
