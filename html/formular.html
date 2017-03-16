@@ -45,6 +45,7 @@
                 <div class="form-element-group">
                     <label>Full name:</label>
                     <input type="text" id="full_name" name="full_name" placeholder="Jane Doe" required>
+                    <label for="required" class="required"></label>
                 </div>
              </div>
 
@@ -54,17 +55,20 @@
              <div class="form-element-group">
                     <label>Email address:</label>
                     <input type="email" id="email_addr" name="email_addr" required>
+                    <label for="required" class="required"></label>
              </div>
              <div class="form-element-group">
                     <label>Repeat email address:</label>
                     <input type="email" id="email_addr_repeat" name="email_addr_repeat" required
                            oninput="check(this)">
+                    <label for="required" class="required"></label>
             </div>
  <!--        </fieldset>  -->
 
             <div class="form-element-group">
                 <label>Choose your room browser:</label>
                 <input list="browsers" id="browser" name="browser" required>
+                <label for="required" class="required"></label>
                 <datalist id="browsers">
                     <option value="IE">
                     <option value="Firefox">
@@ -77,6 +81,7 @@
             <div class="form-element-group">
                 <label>Arrival date:</label>
                 <input type="date" id="arrival_dt" name="arrival_dt" required>
+                <label for="required" class="required"></label>
                 <script>
                     document.getElementById('arrival_dt').value = new Date().toISOString().substring(0, 10);
                 </script>
@@ -85,11 +90,13 @@
             <div class="form-element-group">
                 <label>Number of nights (rooms are $99.00 per night):</label>
                 <input type="number" id="nights" name="nights" value="1" min="1" max="30" required>
+                <label for="required" class="required"></label>
             </div>
 
             <div class="form-element-group">
                 <label>Number of guests (each additional guest adds $10.00 per night):</label>
                 <input type="number" id="guests" name="guests" value="1" min="1" max="4" required>
+                <label for="required" class="required"></label>
             </div>
             <div class="form-element-group">
                 <label>Estimated total:</label>
@@ -101,18 +108,21 @@
              <div class="form-element-group">
                 <label>Irgend Range von 0 bis 100</label>
                 <input type="range" min="0" max="100" value="25" id="range" name="range"/>
+                <label for="required" class="required"></label>
             </div>
 
             <div class="form-element-group">
                 <label>Promo code:</label>
                 <input type="text" id="promo" name="promo" pattern="[A-Za-z0-9]{6}"
                        title="Promo codes consist of 6 alphanumeric characters.">
+                <label for="required" class="required"></label>
             </div>
 
             <div class="form-element-group">
                 <input type="submit" value="Request Reservation" />
             </div>
 
+            <label class="disclaimer">* Required</label>
         </form>
 
 

@@ -217,15 +217,6 @@ img {
 /* ------------------------------------------------- */
 /* formular                                          */
 /* ------------------------------------------------- */
-:required {
-    border-color: #88a;
-    -webkit-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
-    -moz-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
-    -o-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
-    -ms-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
-    box-shadow: 0 0 5px rgba(0, 0, 255, .5);
-}
-
 /* formular elemente mit flex positionieren */
 form {
     display: flex;
@@ -258,7 +249,6 @@ label, input {
     width: 48%;
     flex-basis: auto;
     border-radius: 5px;
-
 }
 
 input[type=submit] {
@@ -276,6 +266,36 @@ fieldset {
     */
 }
 
+label.required{
+    flex-basis: 2px;
+    margin-left: 2px;
+}
+
+input:focus{
+    border:3px solid #5051ff;
+}
+
+input:required + label:after {
+    content: '*';
+}
+
+input:required {
+    border-color: #88a;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+    -o-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+    -ms-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+    box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+}
+
+.superout{
+    margin-right: 8px;
+}
+
+.disclaimer{
+    margin-top: 15px;
+    font-size: 10px;
+}
 
 /*
 input {
