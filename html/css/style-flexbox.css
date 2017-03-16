@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+
+header{
+    background-color: #cebce9;/* zum TESTEN */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+main{
+    background-color: #97de97;/* zum TESTEN */
+    display: flex;
+    flex-direction: column; /*soll nebeneinander sein*/
+    width: 100%;
+}
+
+aside{
+    background-color: #fda9ae;/* zum TESTEN */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+footer{
+    background-color: #fff188;/* zum TESTEN */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* tablet landscape 768 */
+@media (min-device-width: 768px) {
+    main{
+        flex-direction: row; /*soll untereinander gehen*/
+    }
+}
