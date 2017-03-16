@@ -226,15 +226,51 @@ img {
     box-shadow: 0 0 5px rgba(0, 0, 255, .5);
 }
 
+/* formular elemente mit flex positionieren */
 form {
+    display: flex;
+    flex-direction: column;
     width: 90%;
     margin: 20px auto;
 }
 
-label {
-    width: 100%;
+.form-element-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;  /* damit richtet sich das Input Feld dem Label an */
+    margin-bottom: 7px;
 }
 
+.names input {
+    font-weight: bold;
+}
+
+label {
+   /* width: 100%;*/
+}
+
+label, input {
+    width: 48%;
+    flex-basis: auto;
+}
+
+input [type=submit] {
+    width: 99%;
+}
+
+fieldset {
+    margin-bottom: 15px;
+    /*
+    border: none;
+    */
+}
+
+.superout {
+    width: 150px;
+}
+
+/*
 input {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     border:1px solid #ccc;
@@ -260,6 +296,7 @@ input[type=submit] {
 fieldset {
     margin-bottom: 15px;
 }
+*/
 
 
 /* ------------------------------------------------- */
