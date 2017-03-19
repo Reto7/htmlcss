@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,700');
+
+body {
+   font-family: 'Roboto', sans-serif;
+   font-size:1em;
+   display: flex;
+   height: 100%;
+   flex-direction: column;
+}
+
+header,
+footer {
+  flex: none;
+}
+
+header {
+  background: rgba(22,0,0,0.1);
+}
+
+footer {
+  background: rgba(22,0,0,0.4);
+}
+
+.footer-elements{
+	display:flex;
+	flex-direction: row;
+	flex-flow:wrap;
+}
+
+.wrap-around-content {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  background:red;
+  justify-content: space-between;
+}
+
+main{
+	background:#fff;
+	opacity:0.8;
+	border-radius: 3px;
+}
+.content {
+  margin-top: 2em;
+}
+
+.flex-row-container{
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.flex-item{
+	flex-basis:100%;
+}
+nav {
+	color:white;
+    order: -1;
+}
+
+nav a{
+	color:white;
+}
+
+nav,
+aside {
+  padding: 1em;
+  background: rgba(22,0,0,0.6);
+}
+
+aside a{
+   color:white;
+}
+
+@media (min-device-width: 780px) {
+  .wrap-around-content {
+    flex-direction: row;
+  }
+  .flex-row-container{
+	display:flex;
+	flex-direction: row;
+	}
+	.flex-item{
+	flex-basis:30%;
+}
+  .content {
+    flex: 1;
+    padding: 0 1em;
+    margin: 0;
+  }
+  nav, aside {
+    flex: 0 0 12em;
+  }
+  .footer-elements{
+	display:flex;
+	flex-direction: row;
+	flex-flow:nowrap;
+	}
+}
