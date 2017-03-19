@@ -10,6 +10,13 @@
 
 <body>
 
+    <!-- INFO
+        Unterschied zwischen DIV und SPAN:
+        DIV ist ein Block-Element. Ein DIV nimmt die komplette Breite ein, sofern nichts anderes in CSS umdefiniert wurde.
+        SPAN dagegen kann innerhalb eines Bereiches angewendet werden - SPAN ist ein Inline-Element (eine Art NULL).
+
+    -->
+
     <header>
         <div class="header-elements">
             <div id="logo">
@@ -33,8 +40,16 @@
         <!-- ausserhalb article, nur 1x ein H1 setzten -->
         <h1>Startseite</h1>
 
+        <!-- Section vs. Article
+            Ein oder mehrere <article>  Elemente in themenbezogenen <section>  Elementen optimal platziert sind.
+            Somit ist das Beispiel unten eher verkehrt?
+        -->
+
         <!-- mehrere articles, innerhalb jeden Articles
-             nur ein H1 tag, gut fuer Suchmaschinen -->
+             nur ein H1 tag, gut fuer Suchmaschinen
+             Article-Elemente stellen in sich geschlossene Abschnitte eines Dokuments dar, vergleichbar mit
+             einem Zeitungsartikel. Daher hat das Element auch seinen Namen bekommen, es kennzeichnet eben eine
+             journalistische Arbeit, einen Artikel.-->
         <article>
             <h2>Titel Article 1</h2>
             <p>Ausreisepflichtige Ausländer müssen so schnell es geht Deutschland verlassen. In diesem Punkt sind sich Bund und Länder einig. Sie wollen zeitnah ein entsprechendes Gesetz verabschieden. Nur ein Punkt bleibt strittig.</p>
@@ -44,11 +59,23 @@
             <h2>SubTitel Article 1</h2>
             <p>Donald Trumps <b>Twitter</b>-Tiraden über <i>Mexiko</i> schrecken längst nicht alle Unternehmen ab, ins benachbarte Billiglohnland umzuziehen. Selbst die Autobauer sind nicht ganz so folgsam, wie es vielleicht scheint. </p>
             <p><pre><code>hier kommt reines HTML als Code  &lt;h1&gt;</code></pre>
+            <!-- SECTION -->
             <!-- bestimmter Bereich innerhalb Article -->
+            <!-- Laut Spezifikation handelt es sich um eine thematische Gruppierung von Inhalten typischerweise mit
+                 einer Überschrift. So sollten sie verwendet werden, wenn es auf einer Seite tatsächlich verschiedene
+                 Themenbereiche gibt, die sich zusammenfassen lassen.
+                 Section ist also für eine grobe thematische Unterteilung einer Seite in Abschnitte gedacht. -->
             <section>
                 <h4>Links</h4>
                 http://www.w3schools.com/html/ <br>
                 https://validator.w3.org/<br><br>
+                <!--
+                Article als Kind-Element von Section
+                Ein Author koennte einen Artikel schreiben (in einem Blog).
+                Die Kommentare hingegen könnten gemeinsam in einem section-Element untergebracht werden,
+                denn sie unterscheiden sich thematisch ja vom Beitrag, es sind gewissermaßen Antworten,
+                die nicht unbedingt die Meinung des Autors widerspiegeln, ja völlig gegenteilig sein können.
+                -->
             </section>
         </article>
 
