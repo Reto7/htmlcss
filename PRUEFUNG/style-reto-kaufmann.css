@@ -11,8 +11,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: 'Days One', sans-serif; /* google */
-    /*font-family: 'Gloria Hallelujah', cursive; */   /* google */
+    /*font-family: 'Days One', sans-serif; */  /* google */
+    font-family: 'Gloria Hallelujah', cursive;   /* google */
     font-size: 1em;
 }
 
@@ -22,8 +22,11 @@ header, section, footer, aside, nav, article, figure, div {
 }
 
 .header-elements {
-    align-self: flex-start;
+    display: flex;
+    box-sizing: border-box;
+    align-self: center;
 }
+
 
 ul, ol, dl {
     padding-bottom: 0.5em;
@@ -39,8 +42,8 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     margin-bottom: 0.5em;
     line-height: 1.3em;
-    /*font-family: 'Days One', sans-serif;  */ /* google */
-    font-family: 'Gloria Hallelujah', cursive; /* google */
+    font-family: 'Days One', sans-serif;   /* google */
+    /*font-family: 'Gloria Hallelujah', cursive; */  /* google */
 
 }
 
@@ -96,6 +99,8 @@ aside {
     align-items: center;
     width: 80%;
     justify-content: center;
+    padding-bottom: 10px;
+    box-shadow: 10px 5px 5px #5f5f5f;
 }
 
 aside a, aside a:link, aside a:visited {
@@ -148,7 +153,12 @@ header {
 }
 
 /*columns / Spalten Textreihen*/
-.textreihen {
+.textreihenHead h2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.textreihenText {
     display: block;
     column-count: 4;
     column-gap: 20px;
@@ -156,9 +166,8 @@ header {
     margin-bottom: 40px;
     column-width: 150px;
 }
-
-.textreihen h2 {
-
+.textreihenText::selection {
+    background: yellow;
 }
 
 /*responsive*/
