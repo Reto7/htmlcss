@@ -187,7 +187,8 @@ nav ul:hover ul, nav ul:focus ul{
     opacity: 1;
 }
 
-/* spezial-pseudo klassen, wie last-child, before, even, odd,...) */
+
+/* CSS SELECTORS : spezial-pseudo klassen, wie last-child, before, even, odd,...) */
 nav ul ul li:last-child {
     /* oder das x. Kind-Element:  nth-child() */
     /* koennte man verwenden fuer eine horizontale Menüleister, mit | getrennt (Border), aber das letzte am Schluss soll kein | enthalten */
@@ -202,8 +203,8 @@ nav ul ul a:before {
     /* */
     margin-right: 5px;
 }
-/*
-nav ul ul li a:first-letter {
+/* nur bei h oder p
+ nav ul ul li a:first-letter {
     font-size: 3em;
     font-family: 'Gloria Hallelujah', cursive;
 }
@@ -419,4 +420,12 @@ fieldset {
 
 .spalten::selection {
     background: yellow;
+}
+
+
+
+
+/* VIDEO */
+video {
+    width: 100%;
 }
