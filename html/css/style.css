@@ -152,6 +152,30 @@ nav li a{
     color:#FFF;
 }
 
+/* MENUE ALS DROPDOWN */
+nav ul{
+    /* verzoegerung */
+    transition-property: all;
+    transition-delay: 0.3s;
+}
+/* wenn ul innerhalb ul (stacked */
+nav ul ul {
+    /* unsichtbar */
+    opacity: 0;
+}
+nav ul:hover ul, nav ul:focus ul {
+    /* sichtbar */
+    opacity: 1;
+}
+
+/* FontAwesome */
+nav .fa{
+    font-size: 2em;     /* oder <i class="fa fa-camera-retro fa-2x"></i> */
+    margin-right: 0.5em;
+}
+
+
+
 /* muss nicht mit DIV angesprochen werden, kann
  direkt auf die ID losgehen */
 #logo {
