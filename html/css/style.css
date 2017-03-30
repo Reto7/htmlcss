@@ -187,14 +187,27 @@ nav ul:hover ul, nav ul:focus ul{
     opacity: 1;
 }
 
+/* spezial-pseudo klassen, wie last-child, before, even, odd,...) */
 nav ul ul li:last-child {
     /* oder das x. Kind-Element:  nth-child() */
     /* koennte man verwenden fuer eine horizontale Menüleister, mit | getrennt (Border), aber das letzte am Schluss soll kein | enthalten */
     text-decoration: dotted;
     font-family: 'Gloria Hallelujah', cursive;
 }
-
-
+nav ul ul a:before {
+    /* kopiert von font-awesome F12 */
+    content: "\f0a9";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    /* */
+    margin-right: 5px;
+}
+/*
+nav ul ul li a:first-letter {
+    font-size: 3em;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+*/
 
 
 
