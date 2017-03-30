@@ -137,19 +137,50 @@ a:hover {
 
 
 
+nav{
+    display:flex;
+    justify-content:center;
+    box-sizing:border-box;
+}
 nav ul {
-    list-style-type: none;
-    margin: 0; /* chrome macht bei listenelementen oben ein rand, hiermit entfernen! */
+    display:inline-flex;
+    flex-direction:column;
+    list-style: none;
+    border-top: 0px solid #666;
+    margin:0;
+    margin-bottom: 15px;
+    flex-wrap:wrap;
+    transition-duration: 0.3s;
+    transition-property: all;
+    border-radius: 5px;
+    margin: 0;
+}
+nav ul li {
+    border-bottom: 1px solid #666;
+    border-radius: 5px;
+    margin: 0;
+    /*
+    padding: 0;
+
+    */
 }
 nav li {
-    float: left;
-    /* orul */
     padding: 5px 15px 5px 5px;
+    margin: 0;
+    /*
+    padding: 0;
+    margin: 0;
+    */
     background: #5f5f5f;
     color:#FFF;
 }
 nav li a{
+    background: #5f5f5f;
     color:#FFF;
+    margin: 0;
+}
+nav a {
+    text-decoration: none;
 }
 
 /* MENUE ALS DROPDOWN */
@@ -158,15 +189,35 @@ nav ul{
     transition-property: all;
     transition-delay: 0.3s;
 }
-/* wenn ul innerhalb ul (stacked */
+/* wenn ul innerhalb ul (stacked) */
 nav ul ul {
     /* unsichtbar */
     opacity: 0;
+    width: 100%;
 }
 nav ul:hover ul, nav ul:focus ul {
     /* sichtbar */
     opacity: 1;
+    width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* FontAwesome */
 nav .fa{
