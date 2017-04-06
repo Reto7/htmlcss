@@ -26,18 +26,35 @@ div.css-animations {
 .zoomimagesin figure:hover img {
     transform: scale(1.3);
 }
-
 .zoomimagesin figure {
     overflow: hidden;
     width: 273px;
     height: 273px;
 }
-
 .zoomimagesin img {
     transition: all 2s ease;
     transition: all 2s ease;
     max-width: 435px;
 }
+
+/*Zoom out*/
+.zoomimagesout figure:hover img {
+    -webkit-transform:scale(1);
+    transform:scale(1);
+}
+.zoomimagesout figure{
+    overflow:hidden;
+    width:200px;
+    height:150px;
+}
+.zoomimagesout img {
+    -webkit-transform:scale(1.3);
+    transform:scale(1.3);
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+
 
 /**Keyframe animation example loading cycle**/
 .loading-cycle {
@@ -118,55 +135,81 @@ div.css-animations {
 /**Keyframe animation example changing background**/
 .changingimages{
     margin-left: 20px;
-    animation: backgroundchange 20s ease-in infinite;
+    animation: backgroundchange 9s ease-in infinite;
     width: 917px;
     height: 433px;
 }
-
-
 @keyframes backgroundchange {
     0% {
-        background-image:url("../images/pezfess.jpg");
+        background-image:url("../images/a.jpg");
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: auto;
     }
     25% {
-        background-image:url("../images/pezfess2.jpg");
+        background-image:url("../images/b.jpg");
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: auto;
     }
     50% {
-        background-image:url("../images/pezfess3.jpg");
+        background-image:url("../images/c.jpg");
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: auto;
     }
     75% {
-        background-image:url("../images/powder.jpg");
+        background-image:url("../images/d.jpg");
         background-attachment: fixed;
-        background-position: center;
+        bacbackgroundchangekground-position: center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: auto;
     }
     90% {
-        background-image:url("../images/schnee.jpg");
+        background-image:url("../images/a.jpg");
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: auto;
     }
     100% {
-        background-image:url("../images/schnee.jpg");
+        background-image:url("../images/b.jpg");
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: auto;
     }
+}
+
+
+
+/**Keyframe animation example changing Hintergrundfarbe **/
+body {
+    animation: bgColorChange 6s ease-in-out infinite;
+}
+@keyframes bgColorChange {
+    0% {
+        background: #ed4144;
+    }
+    20% {
+        background: #62ed33;
+    }
+    50% {
+        background: #fbed1a;
+    }
+    80% {
+        background: #43b2ed;
+    }
+    100% {
+        background: #ed4144;
+    }
+}
+
+footer {
+    background: -webkit-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet);
 }
 
 

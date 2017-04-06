@@ -26,6 +26,10 @@ header, section, footer, aside, nav, article, div {
     box-sizing: border-box;
 }
 
+header {
+    opacity: 0.1;
+}
+
 ul, ol, dl {
     padding: 0;
     margin: 0;
@@ -154,7 +158,7 @@ main {
 
 /* ~~ Fußzeile und Header ~~ */
 footer, header {
-    background: rgba(0,0,0,0.3);
+    /*background: black;*/ /* rgba(0,0,0,0.3); */
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
@@ -193,6 +197,14 @@ article {
     margin-bottom: 45px;
 }
 
+article.topBereich {
+    display: flex;
+    flex-direction: column;
+}
+article.topBereich ol {
+    padding-left: 40px;
+}
+
 article.video-demo {
     justify-content: space-around;
     align-items: center;
@@ -213,7 +225,8 @@ aside {
 
 aside a, aside a:link, aside a:visited {
     color: white;
-    text-shadow: 5px 5px 5px rgba(255, 0, 0, .8);
+    text-shadow: 5px 5px 5px rgba(140, 140, 140, 0.8);
+
 }
 
 img {

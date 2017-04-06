@@ -1,7 +1,7 @@
 /* ~~ CSS3 backgrounds~~ */
 
 body.css-backgrounds{
-    background-image: url(../images/caumasee.jpg);
+    background-image: url(../images/a.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -14,7 +14,7 @@ footer, header {
 .multiple-background{
       width:320px;
       height:320px;
-      background: url(../images/beverley-yorkshire.jpg) left top no-repeat, url(../images/reh.jpg) right bottom no-repeat, url(../images/crestasee.jpg) left top repeat;
+      background: url(../images/b.jpg) left top no-repeat, url(../images/a.jpg) right bottom no-repeat, url(../images/d.jpg) left top repeat;
       background-size: 150px, 180px, auto;
   }
 
@@ -31,12 +31,12 @@ footer, header {
     height:320px;
     border: 10px solid transparent;
     padding: 15px;
-    -webkit-border-image: url(../images/water-cesenatico.jpg) 30 stretch; /* Safari 3.1-5 */
-    -o-border-image: url(../images/water-cesenatico.jpg) 30 stretch; /* Opera 11-12.1 */
-    border-image: url(../images/water-cesenatico.jpg) 30 stretch;
+    -webkit-border-image: url(../images/c.jpg) 30 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(../images/d.jpg) 30 stretch; /* Opera 11-12.1 */
+    border-image: url(../images/a.jpg) 30 stretch;
     border-radius: 20%;
 
-    background-image: url(../images/venedig.jpg), url(../images/pezfess.jpg);
+    background-image: url(../images/b.jpg), url(../images/c.jpg);
     background-position: right bottom, left top;
     background-repeat: no-repeat, no-repeat;
 }
