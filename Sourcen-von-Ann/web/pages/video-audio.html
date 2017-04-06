@@ -1,0 +1,127 @@
+﻿<!DOCTYPE HTML>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8">
+    <title>HTML5 Video Audio</title>
+    <link rel='stylesheet' href='../css/style-flexbox.css' media='all'/>
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#videocover").click(function () {
+                var video = $("#myvideo").get(0);
+                video.play();
+                $(this).css("visibility", "hidden");
+                return false;
+            });
+            $("#myvideo").bind("pause ended", function () {
+                $("#videocover").css("visibility", "visible");
+            });
+            $("#videocover-two").click(function () {
+                var video = $("#myvideo-two").get(0);
+                video.play();
+                $(this).css("visibility", "hidden");
+                return false;
+            });
+            $("#myvideo-two").bind("pause ended", function () {
+                $("#videocover-two").css("visibility", "visible");
+            });
+        });
+    </script>
+</head>
+<body>
+<header>
+    <div class="header-elements">
+        <div id="logo">
+            <a href="../index.html"><img width="200" src="../images/HTML5_1Color_Black.svg" alt="HTML5 Logo"
+                                         title="HTML5 Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                    <ul>
+                        <li><a href="09022017.html">Repetition 09.02.2017</a></li>
+                        <li><a href="16022017.html">Repetition 16.02.2017</a></li>
+                        <li><a href="23022017.html">Neuigkeiten 23.02.2017</a></li>
+                        <li><a href="09032017.html">Repetition 09.03.2017</a></li>
+                        <li><a href="columns.html">Columns</a></li>
+                        <li><a href="test21032017.html">Test 21.03.2017</a></li>
+                        <li><a href="flexbox-mobilefirst.html">Flexbox mobile first</a></li>
+                        <li><a href="flexbox-komplett.html">Flexbox Beispiel2</a></li>
+                        <li class="active"><a href="video-audio.html">Native Video und Audio</a></li>
+                        <li><a href="css-animationen.html">CSS3 Animationen</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <h1>Videos native play on click. Jquery</h1>
+    <article class="video-demo">
+        <h2>Video ohne controls</h2>
+        <div class="video">
+            <div id="videocover">&nbsp;</div>
+            <video id="myvideo">
+                <!--<source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm>
+                <source src=http://techslides.com/demos/sample-videos/small.ogv type=video/ogg>
+                <source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
+                <source src=http://techslides.com/demos/sample-videos/small.3gp type=video/3gp>-->
+                <source src=../media/small.ogv type=video/ogg>
+                <source src=../media/small.mp4 type=video/mp4>
+            </video>
+        </div>
+        <h2>Video mit controls</h2>
+        <div class="video">
+            <div id="videocover-two">&nbsp;</div>
+            <video width="564" height="323" controls id="myvideo-two">
+                <!--<source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm>
+                <source src=http://techslides.com/demos/sample-videos/small.ogv type=video/ogg>
+                <source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
+                <source src=http://techslides.com/demos/sample-videos/small.3gp type=video/3gp>-->
+                <source src=../media/small.ogv type=video/ogg>
+                <source src=../media/small.mp4 type=video/mp4>
+            </video>
+        </div>
+    </article>
+    <article class="video-demo">
+        <h2>Audio mit controls</h2>
+        <div class="audio">
+            <audio controls>
+                <source src=../media/mpthreetest.mp3 type=audio/mpeg>
+                Ihr Browser unterstützt keine MP3
+            </audio>
+        </div>
+    </article>
+</main>
+<aside class="columns-page">
+    <h2>Links zu Online Hilfen</h2>
+    <p><a href="http://www.sample-videos.com/index.php#sample-mp4-video" target="_blank">Beispiel Videos</a></p>
+    <p><a href="http://techslides.com/sample-webm-ogg-and-mp4-video-files-for-html5" target="_blank">Beispiele von HTML5
+        Videos</a></p>
+    <p><a href="http://www.mirovideoconverter.com/" target="_blank">Video converter</a></p>
+    <p><a href="http://stackoverflow.com/questions/14161516/html5-video-completely-hide-controls/" target="_blank">Beispiel
+        von controls verstecken</a></p>
+    <p>
+        <a href="http://stackoverflow.com/questions/11880917/how-can-i-add-click-to-play-to-my-html5-videos-without-interfering-with-native-c"
+           target="_blank">Beispiel von controls verstecken 2</a></p>
+    <p><a href="https://msdn.microsoft.com/de-de/library/hh924820(v=vs.85).aspx" target="_blank">Online Tutorial
+        Video-Steuerelemente</a></p>
+</aside>
+<footer>
+    <div class="footer-elements">
+        <small>Copyright ©
+            <time datetime="2017">2017</time>
+            by Ann Nielsen
+        </small>
+        <div id="footer-logo">
+            <a href="http://www.w3.org/html/logo/" target="_blank">
+                <img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64"
+                     alt="HTML5 Powered with CSS3 / Styling, and Semantics"
+                     title="HTML5 Powered with CSS3 / Styling, and Semantics">
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

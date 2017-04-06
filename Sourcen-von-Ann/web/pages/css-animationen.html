@@ -1,0 +1,129 @@
+﻿<!DOCTYPE HTML>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8">
+    <title>CSS3 Animationen</title>
+    <link rel='stylesheet' href='../css/style-flexbox.css' media='all'/>
+    <link rel='stylesheet' href='../css/css-animations.css' media='all'/>
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header>
+    <div class="header-elements">
+        <div id="logo">
+            <a href="../index.html"><img width="200" src="../images/HTML5_1Color_Black.svg" alt="HTML5 Logo"
+                                         title="HTML5 Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                    <ul>
+                        <li><a href="09022017.html">Repetition 09.02.2017</a></li>
+                        <li><a href="16022017.html">Repetition 16.02.2017</a></li>
+                        <li><a href="23022017.html">Neuigkeiten 23.02.2017</a></li>
+                        <li><a href="09032017.html">Repetition 09.03.2017</a></li>
+                        <li><a href="columns.html">Columns</a></li>
+                        <li><a href="test21032017.html">Test 21.03.2017</a></li>
+                        <li><a href="flexbox-mobilefirst.html">Flexbox mobile first</a></li>
+                        <li><a href="flexbox-komplett.html">Flexbox Beispiel2</a></li>
+                        <li><a href="video-audio.html">Native Video und Audio</a></li>
+                        <li class="active"><a href="css-animationen.html">CSS3 Animationen</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <article>
+        <h1>CSS3 Animationen</h1>
+        <h2>Aufgaben</h2>
+        <ol>
+            <li>Platziert den Bereich Main bitte unterhalb des Headers</li>
+            <li>Ändert die Hintergrundfarbe vom Header und Footer, so dass sie nur 10% transparent ist</li>
+            <li>Fügt eine Zoom Out Animation ein</li>
+            <li>Animiert die Hintergrundfarbe der Seite. Sie soll zwischen mindestens drei Farbverläufen wechseln</li>
+            <li>Ändert den Schlagschatten des Textes im Aside. Er soll mit Hilfe der RGB Farbe 0 0 0 hellgrau werden
+            </li>
+            <li>Platziert die Elemente hier im ersten Article sinnvol und übersichtlich.
+            </li>
+        </ol>
+    </article>
+    <article class="css-animations">
+        <h2>Zoom</h2>
+        <div class="css-animations zoomimages">
+            <figure>
+                <img src="../images/caumasee.jpg" alt="Cauma See">
+                <figcaption>Cauma See</figcaption>
+            </figure>
+            <figure>
+                <img src="../images/caumasee2.jpg" alt="Cauma See">
+                <figcaption>Cauma See</figcaption>
+            </figure>
+            <figure>
+                <img src="../images/caumasee-winter.jpg" alt="Cauma See im Winter">
+                <figcaption>Cauma See im Winter auf dem Kopf</figcaption>
+            </figure>
+        </div>
+        <h2>Zoom in</h2>
+        <div class="css-animations zoomimagesin">
+            <figure>
+                <img src="../images/burano.jpg" alt="Burano">
+            </figure>
+            <figure>
+                <img src="../images/burano2.jpg" alt="Burano">
+            </figure>
+            <figure>
+                <img src="../images/burano3.jpg" alt="Burano">
+            </figure>
+            <figure>
+                <img src="../images/burano4.jpg" alt="Burano">
+            </figure>
+        </div>
+        <h2>Keyframes nutzen spinner</h2>
+        <div class="css-animations keyframes">
+            <div class="loading-cycle">
+                <div></div>
+            </div>
+        </div>
+        <h2>Keyframes nutzen Ticker</h2>
+        <div class="css-animations keyframes">
+            <div class="masc">
+                <div class="typo-band">Der Lauftext läuft immer weiter, quasi unendlich</div>
+            </div>
+        </div>
+        <h2>Keyframes nutzen Hintergrundbilder wechseln</h2>
+        <div class="css-animations keyframes">
+            <div class="changingimages">
+            </div>
+        </div>
+    </article>
+</main>
+<aside class="columns-page">
+    <h2>Links zu Online Hilfen</h2>
+    <p><a href="http://james-star.com/answers/de/css3-effekte-transformationen-animationen-uebergaenge/"
+          target="_blank">Viele transform transition Beipiele</a></p>
+    <p><a href="http://pepe-juergens.de/2013/02/css3-keyframe-animation/#understanding" target="_blank">Keyframes
+        Animations-Beispiele</a></p>
+    <p><a href="https://css-tricks.com/snippets/css/keyframe-animation-syntax/" target="_blank">Keyframe Syntax</a></p>
+    <p><a href="" target="_blank"></a></p>
+    <p><a href="" target="_blank"></a></p>
+    <p><a href="" target="_blank"></a></p>
+</aside>
+<footer>
+    <div class="footer-elements">
+        <small>Copyright ©
+            <time datetime="2017">2017</time>
+            by Ann Nielsen
+        </small>
+        <div id="footer-logo">
+            <a href="http://www.w3.org/html/logo/" target="_blank">
+                <img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64"
+                     alt="HTML5 Powered with CSS3 / Styling, and Semantics"
+                     title="HTML5 Powered with CSS3 / Styling, and Semantics">
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
