@@ -1,303 +1,255 @@
-﻿
-@import url('https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,700');
+﻿@import url('https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,700');
 
 /*HTML TAGS */
-html, body{
-	height:100%;		
+html, body {
+    height: 100%;
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
-	font-size:1em;
-	background: #42413C;
-	margin: 0;
-	padding: 0;
-	color: #000;
-	font-weight:normal;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-weight: normal;
 }
 
 ul, ol, dl {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 }
+
 h1, h2, h3, h4, h5, h6, p {
-	margin-top: 0;
+    margin-top: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Oswald', sans-serif;
-	text-transform: uppercase;
-	font-weight: 700;
-	margin-bottom: 0.5em;
-	line-height: 1.3em;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    line-height: 1.3em;
 }
 
-h1{
-	font-size: 2em;
-	text-transform: uppercase;
-	font-weight: 700;
+h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
-a img { 
-	border: none;
+a img {
+    border: none;
 }
 
 a:link {
-	color: #999999;
-	text-decoration: underline;
+    color: #999999;
+    text-decoration: underline;
 }
+
 a:visited {
-	color: #333333;
-	text-decoration: underline;
+    color: #333333;
+    text-decoration: underline;
 }
+
 a:hover, a:active, a:focus {
-	text-decoration: none;
+    text-decoration: none;
 }
 
-nav .fa{
-	    font: normal normal normal 24px/1 FontAwesome;
-		margin-right:0.5em;
+/* ~~ NAVIGATION~~ */
+/*------------------*/
+nav .fa {
+    font-size: 2em;
+    margin-right: 0.5em;
 }
 
-nav{
-	display:flex;
-	justify-content:flex-end;
-	box-sizing:border-box;
+nav {
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
 }
-
 
 nav ul {
-	display:inline-flex;
-	flex-direction:column;
-	list-style: none; 
-	border-top: 0px solid #666; 
-	margin-bottom: 15px; 
-	flex-wrap:wrap;
-	/*transition-delay: 2s;*/
-	transition-duration: 0.5s;
-	transition-property: all;
+    display: inline-flex;
+    flex-direction: column;
+    list-style: none;
+    border-top: 0px solid #666;
+    margin-bottom: 1em;
+    flex-wrap: wrap;
+    /*transition-delay: 2s;*/
+    transition-duration: 0.5s;
+    transition-property: all;
+    max-width: 13.75em;
 }
+
 nav ul li {
-	border-bottom: 1px solid #666;
-}
-nav ul li a, nav ul li a:link, nav ul li a:visited { 
-	display: flex; 
-	justify-content:flex-start;
-	text-decoration: none;
-	background: #000000;
-	color:#ffffff;
-	min-height: 28px;
-	padding:5px;
-	align-items:center;
+    margin-bottom: 0.25em;
 }
 
-nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
-	background: #ADB96E;
-	color: #FFF;
+nav ul li a, nav ul li a:link, nav ul li a:visited {
+    display: flex;
+    justify-content: flex-start;
+    text-decoration: none;
+    background: #000000;
+    color: #ffffff;
+    min-height: 2em;
+    padding: 0.5em;
+    align-items: center;
+    border-radius: 5px;
+    transition-property: background;
+    /*transition-delay: 0.2s;*/
+    transition-duration: 0.5s;
+    border: 1px #eeeeee solid;
 }
 
-nav ul ul{
-	opacity:0;
+nav ul ul li a:hover, nav ul ul li a:active, nav ul ul li a:focus, nav ul ul li.active a, nav ul ul li.active a:link, nav ul ul li.active a:visited {
+    border: 1px solid black;
+    background: #eeeeee;
+    box-shadow: inset #000000 1px -3px 2px;
+    color: #000;
 }
 
-nav ul:hover ul, nav ul:focus ul{
-	opacity: 1;
+nav ul ul {
+    position: absolute;
+    top: -500px;
+    opacity: 0;
+    visibility: hidden;
 }
 
-/*END html tags */
-
-#main {
-	width: 80%;
-	height:auto;
-	min-height:100%;
-	padding: 60px 3%;
-	box-sizing: border-box;
-	background: #FFFFFF;
-	margin: 0 auto; 
+nav ul:hover ul, nav ul:focus ul {
+    position: relative;
+    top: 0;
+    opacity: 1;
+    visibility: visible;
 }
 
+/*2. Navigations-Ebene*/
+nav ul li.sub a:before {
+    content: "\f067";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    margin-right: 0.25em;
+}
 
-/* ~~ Fußzeile und Header ~~ */
+nav ul li ul li.sub ul li a:before {
+    content: "";
+    margin-right: 0;
+}
+
+nav ul li ul li ul {
+    display: none;
+}
+
+nav ul li ul li:hover ul {
+    display: block;
+}
+
+/* ~~ End Navigation******/
+
+/* ~~ Footer & Header ~~ */
 footer, header {
-	padding: 10px 0;
-	background: #CCC49F;
-	position: relative;/* Liefert "hasLayout" für Internet Explorer 6, zum korrekten Rücksetzen der
-	schwebenden Ausrichtung. */
-	clear: both;
+    padding: 0.625em 0;
+    background: #EEEEEE;
+    position: relative;
+    clear: both;
 }
-footer{
-    	z-index:1;
+
+footer {
+    z-index: 1;
 }
-.footer-elements, .header-elements{
-	width:80%;
-	margin: 0 auto;
-	height: 190px;
+
+.footer-elements, .header-elements {
+    width: 80%;
+    margin: 0 auto;
+    height: 5em;
 }
 
 header, section, footer, aside, article, figure {
-	display: block;
-	box-sizing:border-box;
+    display: block;
+    box-sizing: border-box;
 }
 
-article{
-    width:80%;
-	display:inline;
-}
-aside{
-	width:20%;
-	position:fixed;
-	right:13%;
-	top: 270px;
-	z-index:3;
-	background: black;
-	color:white;
-	padding: 20px;
-	box-shadow: 5px 5px 5px black;
-		display:none;
+/* ~~ END Footer & Header ~~ */
+
+article {
+    width: 80%;
+    display: inline;
 }
 
-aside a, aside a:link, aside a:visited{
-	color:white;
-	text-decoration:none;
-	box-sizing:border-box;
-	text-shadow: 5px 5px 5px rgba(255, 0, 0, .8);
+aside {
+    width: 20%;
+    position: fixed;
+    right: 13%;
+    top: 270px;
+    z-index: 3;
+    background: black;
+    color: white;
+    padding: 20px;
+    box-shadow: 5px 5px 5px black;
+    display: none;
 }
 
-
-#logo{
-	float:left;
+aside a, aside a:link, aside a:visited {
+    color: white;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-shadow: 5px 5px 5px rgba(255, 255, 255, .8);
 }
 
-details{
-	margin: 20px 0;
+details {
+    margin: 20px 0;
 }
 
-
-.textreihen{
-		column-count:4;
-		column-gap:20px;
-		column-rule: 1px dotted grey;
-		margin-bottom: 40px;
-		column-width: 150px;
-}
-.textreihen h2{
-		column-span: all;
-}
-
-.textreihen::selection{
-	background:yellow;
-}
-
-
-
-/*columns Flex*/
-.container{
-	column-count:3;
-	column-gap:20px;
-	column-rule: 1px dotted grey;
-	/*
-	column-count
-	column-rule-style
-	column-rule-width
-	column-rule-color
-	column-rule
-	column-span
-	column-width
-	*/
-	margin-bottom: 40px;
-}
-
-.flex-container {
+/* ~~ Form styles ~~ */
+form {
+    background: black;
+    border: black solid 1px;
+    border-radius: 5px;
+    max-width: 900px;
     display: flex;
-    width: 100%;
-    height: auto;
-    background-color: lightgrey;
-	margin-bottom: 40px;
+    flex-direction: column;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
-.flex-item {
-    background-color: cornflowerblue;
-    width: 33%;
-    margin: 10px;
+label {
+    color: white;
+    flex-grow: 1;
+    /*flex-shrink:0;*/
+    flex-basis: 48%;
 }
 
-
-.container-grid{
-	
+label.required {
+    flex-basis: 2%;
 }
 
-.container-grid div:first-child{
-	border: 1px solid blue;
-	border-radius: 10px;
+input, textarea {
+    padding: 5px;
+    border: 1px solid white;
+    background: white;
+    color: black;
+    flex-basis: 48%;
+    flex-grow: 1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    border-radius: 2px;
 }
 
-.container-grid div:nth-child(2){
-	border: 1px solid yellow;
-	border-radius: 10px;
+input:focus {
+    border: 3px dotted yellow;
 }
 
-.container-grid div:nth-child(3){
-	border: 1px solid green;
-	border-radius: 10px;
+output {
+    color: white;
 }
 
-aside.columns-page{
-	width:100%;
-	position:relative;
-	right:auto;
-	top: auto;
+input[type="color" i
+
+]
+{
+    background: linear-gradient(to right, #ff5db1 0%, #ed02ed 12%, #6402ed 22%, #022def 33%, #02d1ed 45%, #02ea2c 54%, #99ea02 64%, #e5e502 72%, #e58a02 88%, #e58a02 88%, #e50902 100%)
+;
 }
-
-
-
-/* form styles*/
-form{
-	background:black;
-	border:black solid 1px;
-	border-radius:5px;
-	max-width:900px;
-	display:flex;
-	flex-direction:column;
-	padding:15px;
-	box-sizing:border-box;
-}
-
-label{
-	color:white;
-	flex-grow:1;
-	/*flex-shrink:0;*/
-	flex-basis:48%;
-}
-
-label.required{
-	flex-basis:2%;
-}
-
-
-input, textarea{
-	padding:5px;
-	border:1px solid white;
-	background:white;
-	color:black;
-	flex-basis:48%;
-	flex-grow:1;
-	font-family: 'Roboto', sans-serif;
-	font-size:1em;
-	border-radius: 2px;
-}
-
-
-input:focus{
-	border:3px dotted yellow;
-}
-
-output{
-   color:white;
-}
-
-input[type="color" i]{
-	background: linear-gradient(to right, #ff5db1 0%,#ed02ed 12%,#6402ed 22%,#022def 33%,#02d1ed 45%,#02ea2c 54%,#99ea02 64%,#e5e502 72%,#e58a02 88%,#e58a02 88%,#e50902 100%);
-	}
 
 /*
 input:focus{
@@ -311,12 +263,13 @@ input:valid{
 }
 */
 
-.form-group{
-	display:flex;
-	align-items:center;
-	justify-content:space-between;
-	min-height:40px;
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 40px;
 }
+
 /*
 input:required:before{
  content:'*';
@@ -324,13 +277,13 @@ input:required:before{
 }
 */
 
- input:required + label:after {
+input:required + label:after {
     content: '*';
     color: white;
-  }
+}
 
-input [type=submit]{
-	width:100%;
+input [type=submit] {
+    width: 100%;
 }
 
 /*
@@ -339,7 +292,7 @@ input [type=submit]{
 }
 */
 /*
-:invalid { 
+:invalid {
   border-color: #e88;
   -webkit-box-shadow: 0 0 5px rgba(255, 0, 0, .8);
   -moz-box-shadow: 0 0 5px rbba(255, 0, 0, .8);
@@ -348,47 +301,136 @@ input [type=submit]{
   box-shadow:0 0 5px rgba(255, 0, 0, .8);
 }
 */
-
-
-
-/*responsive*/
-/* Portrait and Landscape */
-@media (min-device-width: 300px) and (max-device-width: 480px)
- {
-	  
-	#logo img{
-		width: 130px;
-	}
-	
-	aside{
-	width:100%;
-	position:relative;
-	right:auto;
-	top:auto;
-	padding: 10px;
-	box-shadow: 2px 5px 2px black;
-	}
-	
-	.textreihen{
-		column-count:2;
-		column-gap:10px;
-		column-rule: 1px dotted grey;
-		margin-bottom: 20px;
-	}
+/* ~~ END Form styles ~~ */
+img {
+    max-width: 100%;
 }
 
+/* ~~ END html tags ~~ */
 
-@media (min-device-width: 480px) and (max-device-width: 600px)
- {
-	aside{
-	width:80%;
-	margin: 0 auto;
-	position:relative;
-	right:auto;
-	top:auto;
-	padding: 10px;
-	box-shadow: 5px 10px 5px black;
-	}
- }
+#main {
+    width: 80%;
+    height: auto;
+    min-height: 100%;
+    padding: 3.75em 3%;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    margin: 0 auto;
+}
+
+#logo {
+    float: left;
+}
+
+/*columns Flex*/
+.textreihen {
+    column-count: 4;
+    column-gap: 20px;
+    column-rule: 1px dotted grey;
+    margin-bottom: 40px;
+    column-width: 150px;
+}
+
+.textreihen h2 {
+    column-span: all;
+}
+
+.textreihen::selection {
+    background: yellow;
+}
+
+.container {
+    column-count: 3;
+    column-gap: 20px;
+    column-rule: 1px dotted grey;
+    /*
+    column-count
+    column-rule-style
+    column-rule-width
+    column-rule-color
+    column-rule
+    column-span
+    column-width
+    */
+    margin-bottom: 40px;
+}
+
+/*Flex*/
+.flex-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: lightgrey;
+    margin-bottom: 40px;
+}
+
+.flex-item {
+    background-color: cornflowerblue;
+    width: 33%;
+    margin: 10px;
+}
+
+.container-grid {
+
+}
+
+.container-grid div:first-child {
+    border: 1px solid blue;
+    border-radius: 10px;
+}
+
+.container-grid div:nth-child(2) {
+    border: 1px solid yellow;
+    border-radius: 10px;
+}
+
+.container-grid div:nth-child(3) {
+    border: 1px solid green;
+    border-radius: 10px;
+}
+
+aside.columns-page {
+    width: 100%;
+    position: relative;
+    right: auto;
+    top: auto;
+}
+
+/*responsive*/
+
+@media (min-device-width: 300px) and (max-device-width: 480px) {
+
+    #logo img {
+        width: 130px;
+    }
+
+    aside {
+        width: 100%;
+        position: relative;
+        right: auto;
+        top: auto;
+        padding: 10px;
+        box-shadow: 2px 5px 2px black;
+    }
+
+    .textreihen {
+        column-count: 2;
+        column-gap: 10px;
+        column-rule: 1px dotted grey;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-device-width: 480px) and (max-device-width: 600px) {
+    aside {
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        right: auto;
+        top: auto;
+        padding: 10px;
+        box-shadow: 5px 10px 5px black;
+    }
+}
 
 

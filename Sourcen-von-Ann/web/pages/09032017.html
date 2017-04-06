@@ -1,79 +1,277 @@
-﻿
-<!DOCTYPE HTML>
-<html>
+﻿<!DOCTYPE HTML>
+<html lang="de-CH">
 <head>
-<meta charset="utf-8">
-	<title>HTML5 Nützliche Tools und Links</title>
-	<link rel='stylesheet'  href='../css/style.css' media='all' />
+	<meta charset="utf-8">
+	<title>HTML5 Formulare</title>
+	<link rel='stylesheet' href='../css/style.css' media='all'/>
 	<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
-    <body>
-		<header>
-		<div class="header-elements">
-			<div id="logo">
-			<a href="../index.html"><img width="200" src="../images/HTML5_1Color_Black.svg" alt="HTML5 Logo" title="HTML5 Logo"></a>
+<body>
+<header>
+	<div class="header-elements">
+		<div id="logo">
+			<a href="../index.html"><img width="200" src="../images/HTML5_1Color_Black.svg" alt="HTML5 Logo"
+										 title="HTML5 Logo"></a>
 		</div>
-				<nav>
-				 <ul>
-					<li><a href="#"><i class="fa fa-bars" aria-hidden="true"></i>Menü</a></li>
-						<ul>
-							<li><a href="09022017.html">Repetition 09.02.2017</a></li>
-							<li><a href="16022017.html">Repetition 16.02.2017</a></li>
-							<li><a href="23022017.html">Neuigkeiten 23.02.2017</a></li>
-							<li><a href="09032017.html">Repetition 09.03.2017</a></li>
-							<li><a href="columns.html">Columns</a></li>
-							<li><a href="forms.html">Formulare</a></li>
-							<li><a href="flexbox-mobilefirst.html">Flexbox mobile first</a></li>
-							<li><a href="flexbox-komplett.html">Flexbox Beispiel2</a></li>
-						</ul>
-				  </ul>
-				</nav>
+		<nav>
+			<ul>
+				<li><a href="#"><i class="fa fa-bars" aria-hidden="true"></i>Menü</a>
+					<ul>
+						<li><a href="09022017.html">Repetition 09.02.2017</a></li>
+						<li><a href="16022017.html">Repetition 16.02.2017</a></li>
+						<li><a href="23022017.html">Neuigkeiten 23.02.2017</a></li>
+						<li class="active"><a href="09032017.html">Repetition 09.03.2017</a></li>
+						<li><a href="columns.html">Columns</a></li>
+						<li><a href="test21032017.html">Test 21.03.2017</a></li>
+						<li><a href="flexbox-mobilefirst.html">Flexbox mobile first</a></li>
+						<li><a href="video-audio.html">Native Video und Audio</a></li>
+						<li><a href="css-animationen.html">CSS3 Animationen</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div id="main">
+	<article>
+		<h1>Formulare erstellen</h1>
+		<!-- start of freefind search box html -->
+		<h2>Seite durchsuchen</h2>
+		<form action="http://search.freefind.com/find.html" method="get" target="_self">
+			<input type="hidden" name="si" value="4376710">
+			<input type="hidden" name="pid" value="r">
+			<input type="hidden" name="n" value="0">
+			<input type="hidden" name="_charset_" value="">
+			<input type="hidden" name="bcd" value="&#247;">
+			<input type="search" name="query" size="40">
+			<input type="submit" value="Suchen">
+		</form>
+		<!-- end of freefind search box html -->
+		<h2>Bitte kontaktieren Sie uns</h2>
+		<p>Wir freuen uns über Ihre Kontaktaufnahme</p>
+		<article>
+
+			<form action="mailto:ann.meldgaard@gmail.com" method="post" enctype="text/plain" oninput="total.value = (nights.valueAsNumber * 99) +
+						 ((guests.valueAsNumber - 1) * 10)">
+				<div class="form-group">
+					<label>Name:</label>
+					<input type="text" id="full_name" name="full_name" placeholder="Hans Muster" required>
+					<label for="required" class="required"></label>
+				</div>
+				<div class="form-group">
+					<label>E-Mail:</label>
+					<input type="email" id="email_addr" autocomplete="off" name="email_addr" placeholder="email" required>
+					<label for="required" class="required"></label>
+				</div>
+				<div class="form-group">
+					<label>E-Mail wiederholen:</label>
+					<input type="email" id="email_addr_repeat" name="email_addr_repeat" autocomplete="off" placeholder="email" required
+						   oninput="check(this)">
+					<label for="required" class="required"></label>
+				</div>
+
+				<div class="form-group">
+					<label>Ankunft date:</label>
+					<input type="date" id="arrival_dt" name="arrival_dt"  required>
+					<label for="required" class="required"></label>
+				</div>
+				<div class="form-group">
+					<label>Anzahl Nächte (Zimmerpreis CHF 99.00 pro Nacht) number:</label>
+					<input type="number" id="nights" name="nights" value="1" min="1" max="30" required>
+					<label for="required" class="required"></label>
+				</div>
+				<div class="form-group">
+					<label>Anzahl Personen (Jede zusätzliche Person CHF 10.00 pro Nacht) number:</label>
+					<input type="number" id="guests" name="guests" value="1" min="1" max="4" required>
+					<label for="required" class="required"></label>
+				</div>
+				<div class="form-group">
+					<label>Geschätzer Gesamtpreis:</label>
+					CHF
+					<output id="total" name="total">99</output>
+					.00
+				</div>
+				<div class="form-group">
+					<label>Rabattcode text with pattern:</label>
+					<input type="text" id="promo" name="promo" pattern="[A-Za-z0-9]{6}"
+						   title="Der Rabatcode besteht aus 6 alphanumerische Zeichen.">
+				</div>
+				<label for="required" class="required"></label>
+				<div class="form-group">
+					<input type="submit" value="Reservieren"/>
+				</div>
+			</form>
+			<script>
+                function check(input) {
+                    if (input.value != document.getElementById('email_addr').value) {
+                        input.setCustomValidity('The two email addresses must match.');
+                    } else {
+                        // input is valid -- reset the error message
+                        input.setCustomValidity('');
+                    }
+                }
+			</script>
+		</article>
+		<article>
+			<h2>Beispiel mit speziellen HTML 5 Elementen</h2>
+			<form action="mailto:ann.meldgaard@gmail.com" method="post" enctype="text/plain" id="register">
+				<h3>Register for Miss Bakers Space Cadets</h3>
+				<fieldset>
+					<legend>Personal details</legend>
+					<div class="form-group">
+						<label>Vorname</label>
+						<input id="given-name" name="given-name" type="text" placeholder="Vorname" required>
+						<label for="required" class="required"></label>
+
+					</div>
+					<div class="form-group">
+						<label>Nachname</label>
+						<input id="family-name" name="family-name" type="text" placeholder="Nachname" required>
+						<label for="required" class="required"></label>
+					</div>
+					<div class="form-group">
+						<label>Geburtstag date</label>
+						<input id="dob" name="dob" type="date" required>
+						<label for="required" class="required"></label>
+					</div>
+					<div class="form-group">
+						<label>E-Mail email</label>
+						<input id="email" name="email" type="email" placeholder="beispiel@domain.com" required>
+						<label for="required" class="required"></label>
+					</div>
+					<div class="form-group">
+						<label>URL url</label>
+						<input id="url" name="url" type="url" placeholder="http://mysite.com">
+						<label for="required" class="required"></label>
+					</div>
+					<div class="form-group">
+						<label>Telephone tel</label>
+						<input id="phone" name="phone" type="tel" placeholder="+41 77 555 55 55" required>
+						<label for="required" class="required"></label>
+					</div>
+					<div class="form-group">
+						<label>Schuhgrösse number min max step</label>
+						<input id="shoes" name="shoes" type="number" min="5" max="18" step="0.5" value="9">
+						<label for="required" class="required"></label>
+					</div>
+					<div class="form-group">
+						<label>Farbe color</label>
+						<input id="color" name="color" type="color">
+						<label for="required" class="required"></label>
+					</div>
+					<div class="form-group">
+						<label>Bewertung range</label>
+						<input id="skill" name="skill" type="range" min="1" max="100" value="100">
+						<label for="required" class="required"></label>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>Billing address</legend>
+					<div class="form-group">
+						<label>Address</label>
+						<textarea id="address" name="address" rows=5 required></textarea>
+						<label for="required" class="required"></label>
+
+					</div>
+					<div class="form-group">
+						<label>Post code</label>
+						<input id="postCode" name="postCode" type="text" required>
+						<label for="required" class="required"></label>
+					</div>
+					<div class="form-group">
+						<label>Land datalist</label>
+						<input id="country" name="country" list="country-names" type="text" required>
+						<datalist id="country-names">
+							<option label="Schweiz" value="Schweiz"></option>
+							<option label="Lichtenstein" value="Lichtenstein"></option>
+							<option label="Deutschland" value="Deutschland"></option>
+							<option label="Dänemark" value="Dänemark"></option>
+							<option label="Österreich" value="Österreich"></option>
+						</datalist>
+						<label for="required" class="required"></label>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>Card details</legend>
+					<fieldset>
+						<legend>Kreditkarte radio</legend>
+						<div class="card-type">
+							<input id="visa" name="cardtype" type="radio">
+							<label for="visa">VISA</label>
+							<input id="mastercard" name="cardtype" type="radio">
+							<label for="mastercard">Mastercard</label>
+							<input id="amex" name="cardtype" type="radio">
+							<label for="amex">AMEX</label>
+						</div>
+					</fieldset>
+					<div class="form-group">
+						<label>Name</label>
+						<input id="cardName" name="cardName" type="text" placeholder="Name wie auf der Karte"
+							   required>
+						<label for="required" class="required"></label>
+					</div>
+					<div class="form-group">
+						<label>Kreditkarten Nummer number</label>
+						<input id="cardNo" name="cardNo" type="number" required
+							   title="Die sechszehn Zahlen, die auf der Vorderseite stehen">
+						<label for="required" class="required"></label>
+					</div>
+					<div class="form-group">
+						<label>Sicherheits code text mit pattern</label>
+						<input id="security" name="security" type="text" required pattern="[0-9]{3}"
+							   title="Die letzten drei Zahlen auf der Rückseite der Karte">
+						<label for="required" class="required"></label>
+					</div>
+					<div class="form-group">
+						<label>Expiry Date month</label>
+						<input id="expiry" name="expiry" type="month">
+						<label for="required" class="required"></label>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div>
+						<button type=submit>Bestellen</button>
+					</div>
+				</fieldset>
+			</form>
+		</article>
+		<section>
+			<h2>Progress</h2>
+			<progress max="100" value="80"></progress>
+		</section>
+	</article>
+	<aside>
+		<h2>Links zu den Quellen</h2>
+		<p><a href="https://www.html5rocks.com/de/tutorials/forms/html5forms/" target="_blank">Quelle Formular mit
+			Javascript</a></p>
+		<p><a href="https://css-tricks.com/html5-progress-element/" target="_blank">CSS Tricks HTML5 Element
+			Progress</a></p>
+		<p><a href="https://html5doctor.com/demos/forms/forms-example.html" target="_blank">HTML5 Doctor</a></p>
+		<p><a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/" target="_blank">CSS Tricks
+			media queries</a></p>
+		<p><a href="http://html5-webdesign.de/output.html" target="_blank">Rechnen mit HTML5</a></p>
+		<p><a href="http://www.formws.onlex.de/html5/output.html" target="_blank">Weiteres Beispiel: Rechnen mit
+			HTML5</a></p>
+		<br><br>
+		<p><a href="https://mailchimp.com" target="_blank">Mailchimp, Online Formular Tool</a></p>
+		<p>Im Buch HTML5 und CSS3 für Dummies Seite 135</p>
+		<!--<p><a href="http://www.html-form-guide.com/contact-form/php-email-contact-form.html" target="_blank">Formular Skript</a></p>-->
+	</aside>
+</div>
+<footer>
+	<div class="footer-elements">
+		<small>Copyright ©
+			<time datetime="2017">2017</time>
+			by Ann Nielsen
+		</small>
+		<div id="footer-logo">
+			<a href="http://www.w3.org/html/logo/" target="_blank">
+				<img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64"
+					 alt="HTML5 Powered with CSS3 / Styling, and Semantics"
+					 title="HTML5 Powered with CSS3 / Styling, and Semantics">
+			</a>
 		</div>
-		</header>
-			<div id="main">
-				<article>
-				<h1>Repetition <time datetime="2017-02-16">16.02.2017time></h1>
-					<section>
-						<h2>Externe CSS Datei einbinden</h2>
-						<p>Wie kann man eine externe <mark>CSS Datei</mark> einbinden?</p>	
-				<details><p>In den Head Bereich mit dem Link Tag</p><summary>HTML Code</summary><pre><code>&lt;link rel='stylesheet'  href='../css/style.css' media='all' /&gt;</code></pre></details>						
-					</section>	
-					<section>
-						<h2>HTML Elemente mit CSS ansprechen</h2>
-						<p>Wie können HTML Elemente mit CSS angesprochen werden?</p>	
-				<details><summary>Antwort</summary><p>Mit den entsprechenden HTML Tags</p></details>						
-					</section>	
-					<section>
-						<h2>Wie können unterschiedliche HTML Elemente angesprochen werden</h2>
-						<p>Wenn ich viele Divs habe und sie unterscheiden will?</p>	
-				<details><summary>Antwort</summary><p>Ich weisse Klassen oder IDs zu</p></details>					
-					</section>	
-						<section>
-						<h2>Class oder ID</h2>
-						<p>Was ist der Unterschied zwischen Klasse (class="") und ID (id="")</p>	
-				<details><summary>Antwort</summary><p>Eine Klasse kann bei vielen Elementen verwendet werden. Die ID sollte eindeutig sein</p></details>					
-					</section>	
-                    	<section>
-						<h2>Class oder ID</h2>
-						<p>Was ist der Unterschied zwischen Klasse (class="") und ID (id="")</p>	
-				<details><summary>Antwort</summary><p>Eine Klasse kann bei vielen Elementen verwendet werden. Die ID sollte eindeutig sein</p></details>					
-					</section>
-                       <section>
-						<h2>Class ID oder HTML-Tag</h2>
-						<p>Welche Zeichen müssen jeweils vor einer Klasse, einer ID und einem Tag stehen?</p>	
-				<details><summary>Antwort</summary><p>Vor Klasse . Vor ID # Vor dem Tag nichts</p></details>					
-					</section>
-				</article>
-			</div>
-		<footer>
-			<div class="footer-elements">
-				 <small>Copyright © <time datetime="2017">2017</time> by Ann Nielsen</small>
-				 <div id="footer-logo">
-				 <a href="http://www.w3.org/html/logo/">
-				 <img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
-				 </a>
-				 </div>
-			</div>
-		</footer>
-    </body>
+	</div>
+</footer>
+</body>
 </html>
