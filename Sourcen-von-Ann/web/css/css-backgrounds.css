@@ -14,7 +14,7 @@ footer, header {
 .multiple-background{
       width:320px;
       height:320px;
-      background: url(../images/b.jpg) left top no-repeat, url(../images/a.jpg) right bottom no-repeat, url(../images/d.jpg) left top repeat;
+      background: url(../images/b.jpg) left top no-repeat, url(../images/a.jpg) right bottom no-repeat, url(../images/d.jpg) left top no-repeat , url(../images/c.jpg) right top no-repeat;
       background-size: 150px, 180px, auto;
   }
 
@@ -34,7 +34,7 @@ footer, header {
     -webkit-border-image: url(../images/c.jpg) 30 stretch; /* Safari 3.1-5 */
     -o-border-image: url(../images/d.jpg) 30 stretch; /* Opera 11-12.1 */
     border-image: url(../images/a.jpg) 30 stretch;
-    border-radius: 20%;
+    border-radius: 100%;
 
     background-image: url(../images/b.jpg), url(../images/c.jpg);
     background-position: right bottom, left top;
